@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
@@ -19,9 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         
 
-        var viewController:UIViewController? = UIViewController()
-        viewController!.view.backgroundColor = UIColor.redColor()
+        var viewController:ViewController? = ViewController()
+        //viewController!.view.backgroundColor = UIColor.redColor()
         self.navigationController = UINavigationController(rootViewController:viewController!)
+        //self.navigationController!.navigationItem.title = "Swifty"
 
         
         

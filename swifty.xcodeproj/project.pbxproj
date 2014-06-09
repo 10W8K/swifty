@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA283B8C19449F6A004A5F9B /* ENMBadgedBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA283B8B19449F6A004A5F9B /* ENMBadgedBarButtonItem.swift */; };
 		FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665C5B19442D0F002F784F /* AppDelegate.swift */; };
 		FA665C5E19442D0F002F784F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA665C5D19442D0F002F784F /* Images.xcassets */; };
 		FA665C6A19442D0F002F784F /* swiftyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665C6919442D0F002F784F /* swiftyTests.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA283B8B19449F6A004A5F9B /* ENMBadgedBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENMBadgedBarButtonItem.swift; sourceTree = "<group>"; };
 		FA665C5619442D0F002F784F /* swifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA665C5A19442D0F002F784F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA665C5B19442D0F002F784F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				FA665C5D19442D0F002F784F /* Images.xcassets */,
 				FA665C5919442D0F002F784F /* Supporting Files */,
 				FA665C7319442ECA002F784F /* ViewController.swift */,
+				FA283B8B19449F6A004A5F9B /* ENMBadgedBarButtonItem.swift */,
 			);
 			path = swifty;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				FA665C7419442ECA002F784F /* ViewController.swift in Sources */,
 				FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */,
+				FA283B8C19449F6A004A5F9B /* ENMBadgedBarButtonItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +385,7 @@
 				FA665C6F19442D0F002F784F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA665C7019442D0F002F784F /* Build configuration list for PBXNativeTarget "swiftyTests" */ = {
 			isa = XCConfigurationList;
@@ -389,6 +394,7 @@
 				FA665C7219442D0F002F784F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
