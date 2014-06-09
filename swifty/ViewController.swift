@@ -44,6 +44,11 @@ class ViewController: UIViewController {
             target: self,
             action: "rightButtonPressed:")
         navigationItem.rightBarButtonItem = addButton
+        
+        
+        
+        /* 隐藏navigationBar */
+        //navigationController.navigationBarHidden = true
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)

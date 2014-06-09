@@ -14,25 +14,21 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
     var window: UIWindow?
-    var navigationController: UINavigationController?
+    var rootNavigationController: UINavigationController?
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         
-
-        var viewController:ViewController? = ViewController()
-        //viewController!.view.backgroundColor = UIColor.redColor()
-        self.navigationController = UINavigationController(rootViewController:viewController!)
-        //self.navigationController!.navigationItem.title = "Swifty"
-
-        
-        
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        // Override point for customization after application launch.
-        self.window!.rootViewController = self.navigationController;
-        
-        
         self.window!.backgroundColor = UIColor.whiteColor()
+
+
+        var rootViewController:RootViewController? = RootViewController()
+        self.rootNavigationController = UINavigationController(rootViewController:rootViewController!)
+
+        
+        // Override point for customization after application launch.
+        self.window!.rootViewController = self.rootNavigationController;
         self.window!.makeKeyAndVisible()
         return true
     }
