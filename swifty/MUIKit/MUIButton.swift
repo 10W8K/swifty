@@ -25,11 +25,13 @@ class MUIButton: UIButton {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
-        self.layer.backgroundColor = UIColor.grayColor().CGColor
-        self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = 4.0
-        self.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor.redColor(), forState: UIControlState.Highlighted)
+        //self.layer.backgroundColor = UIColor.grayColor().CGColor
+        self.layer.backgroundColor = UIColor(hex:0xdd352f).CGColor
+        
+        self.layer.borderWidth = 0.2
+        self.layer.cornerRadius = 3.0
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
 
         
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
