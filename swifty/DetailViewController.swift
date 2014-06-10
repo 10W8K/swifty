@@ -42,6 +42,9 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             var imageView = UIImageView(frame: CGRectMake((CGRectGetWidth(self.view.bounds) - image.size.width) / 2.0, 120.0, image.size.width, image.size.height))
             imageView.image = image
             self.view.addSubview(imageView)
+        }else if(self.title == "UISlider"){
+            var slider = UISlider(frame:CGRectMake(60.0, 120.0, 200.0, 30.0))
+            self.view.addSubview(slider)
         }else if(self.title == "UIWebView"){
             var webView = UIWebView(frame:self.view.bounds)
             var url = NSURL(string: "http://caipiao.m.taobao.com")
