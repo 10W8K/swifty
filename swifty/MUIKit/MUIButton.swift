@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class MUIButton: UIButton {
     
     let button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
@@ -24,15 +25,31 @@ class MUIButton: UIButton {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
-        self.frame = CGRectMake(110.0, 120.0, 100.0, 50.0)
-        self.backgroundColor = UIColor.grayColor()
+        //self.layer.backgroundColor = UIColor.greenColor().CGColor
+        self.layer.borderWidth = 1.0
+        self.layer.cornerRadius = 4.0
         self.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
-        self.setTitle("Touch Me", forState: UIControlState.Normal)
-        self.setTitle("Touch Me", forState: UIControlState.Highlighted)
-        //self.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.tag = 100
+        self.setTitleColor(UIColor.blueColor(), forState: UIControlState.Highlighted)
 
+        
+        self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+
+        /** help - how to use autolayout in swift
+        let constraint = NSLayoutConstraint(
+                    constraintsWithVisualFormat:"H:|-20-[self.view]-20-|",
+                    options:0,
+                    metrics:nil,
+                    views:NSDictionaryOfVariableBindings(self.view))
+        */
+        
+        self.superview.addConstraints([
+            
+            ])
+        
+        
+        //NSLayoutConstraint(constraintsWithVisualFormat:"V:|-20-[self.view]-20-|")
+        
     }
 
 
