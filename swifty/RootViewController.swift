@@ -19,7 +19,7 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
     
         self.title = "Swift"
-        self.items = ["UILabel", "UIButton", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UITextView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView"]
+        self.items = ["UILabel", "UIButton", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UITextView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView","MUIButton"]
         self.tableView = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self

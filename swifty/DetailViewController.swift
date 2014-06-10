@@ -142,6 +142,12 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             activityIndicatorView.frame = CGRectMake(140.0, 120.0, 40.0, 40.0)
             activityIndicatorView.startAnimating()
             self.view.addSubview(activityIndicatorView)
+        }else if(self.title == "MUIButton"){
+            //var button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+            var button:MUIButton? = MUIButton(frame:CGRectMake(110.0, 120.0, 100.0, 50.0))
+            
+            //button!.frame = CGRectMake(110.0, 120.0, 100.0, 50.0)
+            self.view.addSubview(button!)
         }else{
         }
         
