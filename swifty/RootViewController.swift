@@ -12,18 +12,23 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var tableView: UITableView?
     var items: NSArray?
+    var cellIndentifier = "cellIndentifier"
     
     override func viewDidLoad() {
-        //super.viewDidLoad()
+        super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     
         self.title = "Swift"
         self.items = ["UILabel", "UIButton", "UIImageView", "UISlider", "UIWebView", "UISegmentedControl", "UISwitch", "UITextField", "UIScrollView", "UISearchBar", "UIPageControl", "UIDatePicker", "UIPickerView", "UIProgressView", "UITextView", "UIToolbar", "UIActionSheet", "UIActivityIndicatorView","MUIButton"]
+        
         self.tableView = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
+        
+        self.tableView!.registerClass(MyTableViewCell.self, forCellReuseIdentifier: cellIndentifier)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
-        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+//        self.tableView!.separatorStyle  = UITableViewCellSeparatorStyle.None
+        
         self.view?.addSubview(self.tableView)
     }
     
@@ -40,12 +45,15 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell!
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MyTableViewCell!
+       
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         cell.textLabel.text = self.items?.objectAtIndex(indexPath.row) as String
+        cell.detailTextLabel.text = "我是副文本"
         
         return cell
     }
+    
     
     // UITableViewDelegate Methods
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!)
