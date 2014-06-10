@@ -25,30 +25,51 @@ class MUIButton: UIButton {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
-        //self.layer.backgroundColor = UIColor.greenColor().CGColor
+        self.layer.backgroundColor = UIColor.grayColor().CGColor
         self.layer.borderWidth = 1.0
         self.layer.cornerRadius = 4.0
-        self.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor.blueColor(), forState: UIControlState.Highlighted)
+        self.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor.redColor(), forState: UIControlState.Highlighted)
 
         
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
         
-
-        /** help - how to use autolayout in swift
-        let constraint = NSLayoutConstraint(
-                    constraintsWithVisualFormat:"H:|-20-[self.view]-20-|",
-                    options:0,
-                    metrics:nil,
-                    views:NSDictionaryOfVariableBindings(self.view))
-        */
-        
-        self.superview.addConstraints([
-            
-            ])
         
         
-        //NSLayoutConstraint(constraintsWithVisualFormat:"V:|-20-[self.view]-20-|")
+        //constraints
+        var constraints = NSLayoutConstraint[]()
+        constraints += NSLayoutConstraint(item: self,
+            attribute: NSLayoutAttribute.Left,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.superview,
+            attribute: NSLayoutAttribute.Left,
+            multiplier: 1.0,
+            constant: 10.0)
+        
+        
+        constraints += NSLayoutConstraint(item: self,
+            attribute: NSLayoutAttribute.Right,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.superview,
+            attribute: NSLayoutAttribute.Right,
+            multiplier: 1.0,
+            constant: -10.0)
+        
+        
+        constraints += NSLayoutConstraint(item: self,
+            attribute: NSLayoutAttribute.Top,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.superview,
+            attribute: NSLayoutAttribute.Bottom,
+            multiplier: 1.0,
+            constant: -50.0)
+        
+        
+        
+        
+        self.superview.addConstraints(constraints)
+        
+    
         
     }
 
