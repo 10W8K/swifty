@@ -144,9 +144,8 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             self.view.addSubview(activityIndicatorView)
         }else if(self.title == "MUIButton"){
             //var button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
-            let button1:MUIButton? = MUIButton(frame:CGRectMake(110.0, 200.0, 100.0, 50.0))
-            button1!.setTitle("确定",forState: UIControlState.Normal)
-            button1!.setTitle("确定", forState: UIControlState.Highlighted)
+            let button1:MUIButton? = MUIButton(frame:CGRectMake(10.0, 200.0, 300.0, 50.0))
+            
             
             
             self.view.addSubview(button1!)
