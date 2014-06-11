@@ -143,13 +143,12 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             activityIndicatorView.startAnimating()
             self.view.addSubview(activityIndicatorView)
         }else if(self.title == "MUIButton"){
-            //var button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
-            let button1:MUIButton? = MUIButton(frame:CGRectMake(10.0, 200.0, 300.0, 50.0))
-            
-            
-            
+            var button1:MUIButton? = MUIButton(frame:CGRectMake(10.0, 200.0, 300.0, 50.0))
+            button1!.addTarget(self, action: "touchDown", forControlEvents: UIControlEvents.TouchDown)
+            button1!.font = UIFont(name:"Helvetica",size:24)
+            button1!.setTitle("OK",forState: UIControlState.Normal)
+            button1!.setTitle("OK", forState: UIControlState.Highlighted)
             self.view.addSubview(button1!)
-            
         }else{
         }
         
@@ -224,6 +223,10 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         var alertController = UIAlertController(title: "ActionSheet", message: "Message", preferredStyle: UIAlertControllerStyle.ActionSheet)
         alertController.addAction(UIAlertAction(title: "Go Back", style: UIAlertActionStyle.Destructive, handler: nil))
         self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func touchDown(){
+        NSLog("touchDown")
     }
 
 }
