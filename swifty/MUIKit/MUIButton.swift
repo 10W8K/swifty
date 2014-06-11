@@ -7,17 +7,25 @@
 //
 
 import UIKit
+import QuartzCore
 
 
 class MUIButton: UIButton {
     
-    let button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+    //let button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
+    
+    let gradientLayer:CAGradientLayer = CAGradientLayer()
     
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
-
+        
+        self.addTarget(self, action: "touchDown", forControlEvents: UIControlEvents.TouchDown)
+        self.addTarget(self, action: "touchCancel", forControlEvents: UIControlEvents.TouchCancel)
     }
+    
+    
+
     
 
     // Only override drawRect: if you perform custom drawing.
@@ -25,16 +33,45 @@ class MUIButton: UIButton {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
-        self.layer.backgroundColor = UIColor.grayColor().CGColor
-        self.layer.borderWidth = 1.0
-        self.layer.cornerRadius = 4.0
-        self.setTitleColor(UIColor.blueColor(), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor.redColor(), forState: UIControlState.Highlighted)
+        //self.layer.backgroundColor = UIColor.grayColor().CGColor
+        //self.layer.backgroundColor = UIColor(hex:0xdd352f).CGColor
+        
+        self.layer.masksToBounds = true;
+    
+        
+        
+        //let gradientLayer:CAGradientLayer = CAGradientLayer()
+        self.gradientLayer.bounds = self.layer.bounds
+        self.gradientLayer.anchorPoint = CGPointMake(0.0, 0.0);
+        
+        self.gradientLayer.colors = [
+            UIColor(hex:0xff6600).CGColor,
+            UIColor(hex:0xff0000).CGColor,
+            UIColor(hex:0xff6600).CGColor
+        ]
+        
+        self.gradientLayer.startPoint = CGPointMake(0.0, 0.0);
+        self.gradientLayer.endPoint = CGPointMake(0.0, 2.0);
+        
+        self.gradientLayer.removeFromSuperlayer()
+        self.layer.addSublayer(self.gradientLayer)
+        
+        
+        
+        self.layer.borderWidth = 0.4
+        self.layer.borderColor = UIColor(hex:0x999999).CGColor
+        self.layer.cornerRadius = 3.0
+        
+        
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
 
         
+        self.setTitle("确定",forState: UIControlState.Normal)
+        self.setTitle("确定", forState: UIControlState.Highlighted)
+        
+        
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
-        
-        
         
         //constraints
         var constraints = NSLayoutConstraint[]()
@@ -65,12 +102,46 @@ class MUIButton: UIButton {
             constant: -50.0)
         
         
-        
-        
         self.superview.addConstraints(constraints)
         
     
+    }
+    
+    
+    // Button Handler
+    // showActionSheet
+    func touchDown()
+    {
         
+        
+        self.gradientLayer.bounds = self.layer.bounds
+        self.gradientLayer.anchorPoint = CGPointMake(0.0, 0.0);
+        
+        self.gradientLayer.colors = [
+            UIColor(hex:0xff0000).CGColor,
+            UIColor(hex:0xff6600).CGColor,
+            UIColor(hex:0xff0000).CGColor
+        ]
+        
+        self.gradientLayer.startPoint = CGPointMake(0.0, 0.0);
+        self.gradientLayer.endPoint = CGPointMake(0.0, 2.0);
+        
+        self.gradientLayer.removeFromSuperlayer()
+        
+        self.layer.addSublayer(gradientLayer)
+        
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
+        
+        self.setTitle("确定",forState: UIControlState.Normal)
+        self.setTitle("确定", forState: UIControlState.Highlighted)
+    }
+    
+    func touchCancel()
+    {
+        
+        
+        NSLog("touchCancel")
     }
 
 
