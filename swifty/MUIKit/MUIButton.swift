@@ -19,9 +19,9 @@ class MUIButton: UIButton {
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
-        
         self.addTarget(self, action: "touchDown", forControlEvents: UIControlEvents.TouchDown)
-        self.addTarget(self, action: "touchCancel", forControlEvents: UIControlEvents.TouchCancel)
+        self.addTarget(self, action: "touchUpInside", forControlEvents: UIControlEvents.TouchUpInside)
+        
     }
     
     
@@ -109,13 +109,13 @@ class MUIButton: UIButton {
     
     
     // Button Handler
-    // showActionSheet
     func touchDown()
     {
-        
-        
-        self.gradientLayer.bounds = self.layer.bounds
-        self.gradientLayer.anchorPoint = CGPointMake(0.0, 0.0);
+//        if(self.highlighted){
+//            NSLog("trueB")
+//        }else{
+//            NSLog("falseB")
+//        }
         
         self.gradientLayer.colors = [
             UIColor(hex:0xff0000).CGColor,
@@ -127,22 +127,58 @@ class MUIButton: UIButton {
         self.gradientLayer.endPoint = CGPointMake(0.0, 2.0);
         
         self.gradientLayer.removeFromSuperlayer()
+        self.layer.addSublayer(self.gradientLayer)
+
         
-        self.layer.addSublayer(gradientLayer)
         
         self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
         self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
-        
         self.setTitle("确定",forState: UIControlState.Normal)
         self.setTitle("确定", forState: UIControlState.Highlighted)
+        
+        
+        //self.verticalAlignment = UIControlContentVerticalAlignment.Center;
+        //self.Font = UIFont.FromName("Helvetica", 12);
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
+        self.setTitle("确定",forState: UIControlState.Normal)
+        
     }
     
-    func touchCancel()
-    {
+    
+    func touchUpInside() {
+        //        if(self.highlighted){
+        //            NSLog("trueA")
+        //        }else{
+        //            NSLog("falseA")
+        //        }
         
         
-        NSLog("touchCancel")
+        self.gradientLayer.colors = [
+            
+            UIColor(hex:0xff6600).CGColor,
+            UIColor(hex:0xff0000).CGColor,
+            UIColor(hex:0xff6600).CGColor
+        ]
+        
+        self.gradientLayer.startPoint = CGPointMake(0.0, 0.0);
+        self.gradientLayer.endPoint = CGPointMake(0.0, 2.0);
+        
+        self.gradientLayer.removeFromSuperlayer()
+        self.layer.addSublayer(self.gradientLayer)
+        
+
+        
+        
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
+        self.setTitle("确定",forState: UIControlState.Normal)
+        self.setTitle("确定", forState: UIControlState.Highlighted)
+        
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
+        self.setTitle("确定",forState: UIControlState.Normal)
+        
     }
+    
 
 
 }
