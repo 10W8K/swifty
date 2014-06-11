@@ -37,7 +37,7 @@ class MUIButton: UIButton {
         //self.layer.backgroundColor = UIColor(hex:0xdd352f).CGColor
         
         self.layer.masksToBounds = true;
-    
+        
         
         
         //let gradientLayer:CAGradientLayer = CAGradientLayer()
@@ -54,7 +54,7 @@ class MUIButton: UIButton {
         self.gradientLayer.endPoint = CGPointMake(0.0, 2.0);
         
         self.gradientLayer.removeFromSuperlayer()
-        self.layer.addSublayer(self.gradientLayer)
+        self.layer.insertSublayer(self.gradientLayer,atIndex:0)
         
         
         
@@ -62,6 +62,8 @@ class MUIButton: UIButton {
         self.layer.borderColor = UIColor(hex:0x999999).CGColor
         self.layer.cornerRadius = 3.0
         
+        self.font = UIFont(name:"Helvetica",size:16)
+        self.contentVerticalAlignment = UIControlContentVerticalAlignment.Center;
         
         self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
         self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
@@ -69,6 +71,7 @@ class MUIButton: UIButton {
         
         self.setTitle("确定",forState: UIControlState.Normal)
         self.setTitle("确定", forState: UIControlState.Highlighted)
+        
         
         
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -109,14 +112,8 @@ class MUIButton: UIButton {
     
     
     // Button Handler
-    func touchDown()
-    {
-//        if(self.highlighted){
-//            NSLog("trueB")
-//        }else{
-//            NSLog("falseB")
-//        }
-        
+    func touchDown(){
+
         self.gradientLayer.colors = [
             UIColor(hex:0xff0000).CGColor,
             UIColor(hex:0xff6600).CGColor,
@@ -127,32 +124,11 @@ class MUIButton: UIButton {
         self.gradientLayer.endPoint = CGPointMake(0.0, 2.0);
         
         self.gradientLayer.removeFromSuperlayer()
-        self.layer.addSublayer(self.gradientLayer)
-
-        
-        
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
-        self.setTitle("确定",forState: UIControlState.Normal)
-        self.setTitle("确定", forState: UIControlState.Highlighted)
-        
-        
-        //self.verticalAlignment = UIControlContentVerticalAlignment.Center;
-        //self.Font = UIFont.FromName("Helvetica", 12);
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
-        self.setTitle("确定",forState: UIControlState.Normal)
-        
+        self.layer.insertSublayer(self.gradientLayer,atIndex:0)
     }
     
     
     func touchUpInside() {
-        //        if(self.highlighted){
-        //            NSLog("trueA")
-        //        }else{
-        //            NSLog("falseA")
-        //        }
-        
-        
         self.gradientLayer.colors = [
             
             UIColor(hex:0xff6600).CGColor,
@@ -164,19 +140,8 @@ class MUIButton: UIButton {
         self.gradientLayer.endPoint = CGPointMake(0.0, 2.0);
         
         self.gradientLayer.removeFromSuperlayer()
-        self.layer.addSublayer(self.gradientLayer)
-        
+        self.layer.insertSublayer(self.gradientLayer,atIndex:0)
 
-        
-        
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
-        self.setTitle("确定",forState: UIControlState.Normal)
-        self.setTitle("确定", forState: UIControlState.Highlighted)
-        
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
-        self.setTitle("确定",forState: UIControlState.Normal)
-        
     }
     
 
