@@ -21,10 +21,9 @@
 		FAD543771949CA1C004432F8 /* MUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543761949CA1C004432F8 /* MUILabel.swift */; };
 		FAD543791949CB91004432F8 /* MUITextFieldWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543781949CB91004432F8 /* MUITextFieldWithLabelView.swift */; };
 		FADD7CA61946A9ED00503154 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD7CA51946A9ED00503154 /* IndexViewController.swift */; };
-		FD2417701948A48100C29C87 /* textfieldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24176F1948A48100C29C87 /* textfieldTableViewController.swift */; };
-		FD9C20C21946F7F300700C91 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9C20C11946F7F300700C91 /* MyTableViewCell.swift */; };
 		FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0219499AD000B9438E /* MUIView.swift */; };
 		FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */; };
+		FD3B38E9194A0DFA00D08C7C /* textfieldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B38E8194A0DFA00D08C7C /* textfieldTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,10 +59,9 @@
 		FAD543761949CA1C004432F8 /* MUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUILabel.swift; path = MUIKit/MUILabel.swift; sourceTree = "<group>"; };
 		FAD543781949CB91004432F8 /* MUITextFieldWithLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITextFieldWithLabelView.swift; path = MUIKit/MUITextFieldWithLabelView.swift; sourceTree = "<group>"; };
 		FADD7CA51946A9ED00503154 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = "View Controllers/IndexViewController.swift"; sourceTree = "<group>"; };
-		FD24176F1948A48100C29C87 /* textfieldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = textfieldTableViewController.swift; path = "View Controllers/textfieldTableViewController.swift"; sourceTree = "<group>"; };
-		FD9C20C11946F7F300700C91 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		FAEA0C0219499AD000B9438E /* MUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIView.swift; path = MUIKit/MUIView.swift; sourceTree = "<group>"; };
 		FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseMUIViewController.swift; path = MUIKit/BaseMUIViewController.swift; sourceTree = "<group>"; };
+		FD3B38E8194A0DFA00D08C7C /* textfieldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = textfieldTableViewController.swift; path = "View Controllers/textfieldTableViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +172,8 @@
 		FADD7CA41946A9A400503154 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B38E8194A0DFA00D08C7C /* textfieldTableViewController.swift */,
 				FADD7CA51946A9ED00503154 /* IndexViewController.swift */,
-				FD24176F1948A48100C29C87 /* textfieldTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -290,9 +288,8 @@
 				FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */,
 				FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */,
 				FAD543791949CB91004432F8 /* MUITextFieldWithLabelView.swift in Sources */,
+				FD3B38E9194A0DFA00D08C7C /* textfieldTableViewController.swift in Sources */,
 				FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */,
-				FD2417701948A48100C29C87 /* textfieldTableViewController.swift in Sources */,
-				FD9C20C21946F7F300700C91 /* MyTableViewCell.swift in Sources */,
 				FAD543751949C9F8004432F8 /* MUITextField.swift in Sources */,
 				FA67A94119499000004D5649 /* MUITableViewCell.swift in Sources */,
 				FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */,

@@ -30,7 +30,7 @@ class textfieldTableViewController: UIViewController, UITableViewDelegate, UITab
 
         self.tableView = UITableView(frame:CGRectMake(self.view.frame.origin.x,self.view.frame.origin.y,self.view.frame.size.width,self.view.frame.size.height), style:UITableViewStyle.Plain)
         
-        self.tableView!.registerClass(MyTableViewCell.self, forCellReuseIdentifier: cellIndentifier)
+        self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         // Do any additional setup after loading the view.
@@ -56,7 +56,7 @@ class textfieldTableViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MyTableViewCell!
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MUITableViewCell!
         
         cell.accessoryType = UITableViewCellAccessoryType.None
         

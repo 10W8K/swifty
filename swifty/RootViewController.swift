@@ -15,6 +15,9 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
     var cellIndentifier = "cellIndentifier"
     
     var itemArray = [
+        ["MUIButton":"按钮"],
+        ["MUInputBox":"输入框"],
+        ["MUITextFieldWithLabelView":"带标签的输入框"],
         ["UILabel":"标签"],
         ["UIButton":"按钮"],
         ["UIImageView":"图片"],
@@ -32,10 +35,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
         ["UITextView":"文本显示"],
         ["UIToolbar":"工具栏"],
         ["UIActionSheet":"动作条"],
-        ["UIActivityIndicatorView":"我是副文本"],
-        ["MUIButton":"按钮"],
-        ["MUInputBox":"输入框"],
-        ["MUITextFieldWithLabelView":"带标签的输入框"]
+        ["UIActivityIndicatorView":"我是副文本"]
     ]
     
     
