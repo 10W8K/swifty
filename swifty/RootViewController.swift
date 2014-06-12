@@ -34,7 +34,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
         ["UIActionSheet":"动作条"],
         ["UIActivityIndicatorView":"我是副文本"],
         ["MUIButton":"按钮"],
-        ["MUITextFieldWithLabel":"带标签的输入框"]
+        ["MUITextFieldWithLabelView":"带标签的输入框"]
     ]
     
     

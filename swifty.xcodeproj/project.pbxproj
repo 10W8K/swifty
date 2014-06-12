@@ -19,7 +19,7 @@
 		FAC212FA1947088100FAC7D5 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC212F91947088100FAC7D5 /* UIColor+Hex.m */; };
 		FAD543751949C9F8004432F8 /* MUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543741949C9F8004432F8 /* MUITextField.swift */; };
 		FAD543771949CA1C004432F8 /* MUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543761949CA1C004432F8 /* MUILabel.swift */; };
-		FAD543791949CB91004432F8 /* MUITextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543781949CB91004432F8 /* MUITextFieldWithLabel.swift */; };
+		FAD543791949CB91004432F8 /* MUITextFieldWithLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543781949CB91004432F8 /* MUITextFieldWithLabelView.swift */; };
 		FADD7CA61946A9ED00503154 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD7CA51946A9ED00503154 /* IndexViewController.swift */; };
 		FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0219499AD000B9438E /* MUIView.swift */; };
 		FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */; };
@@ -56,7 +56,7 @@
 		FAC212F91947088100FAC7D5 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Custom Classes/UIColor+Hex.m"; sourceTree = "<group>"; };
 		FAD543741949C9F8004432F8 /* MUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITextField.swift; path = MUIKit/MUITextField.swift; sourceTree = "<group>"; };
 		FAD543761949CA1C004432F8 /* MUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUILabel.swift; path = MUIKit/MUILabel.swift; sourceTree = "<group>"; };
-		FAD543781949CB91004432F8 /* MUITextFieldWithLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITextFieldWithLabel.swift; path = MUIKit/MUITextFieldWithLabel.swift; sourceTree = "<group>"; };
+		FAD543781949CB91004432F8 /* MUITextFieldWithLabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITextFieldWithLabelView.swift; path = MUIKit/MUITextFieldWithLabelView.swift; sourceTree = "<group>"; };
 		FADD7CA51946A9ED00503154 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = "View Controllers/IndexViewController.swift"; sourceTree = "<group>"; };
 		FAEA0C0219499AD000B9438E /* MUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIView.swift; path = MUIKit/MUIView.swift; sourceTree = "<group>"; };
 		FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseMUIViewController.swift; path = MUIKit/BaseMUIViewController.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */,
 				FAD543741949C9F8004432F8 /* MUITextField.swift */,
 				FAD543761949CA1C004432F8 /* MUILabel.swift */,
-				FAD543781949CB91004432F8 /* MUITextFieldWithLabel.swift */,
+				FAD543781949CB91004432F8 /* MUITextFieldWithLabelView.swift */,
 			);
 			name = MUIKit;
 			sourceTree = "<group>";
@@ -284,7 +284,7 @@
 				FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */,
 				FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */,
 				FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */,
-				FAD543791949CB91004432F8 /* MUITextFieldWithLabel.swift in Sources */,
+				FAD543791949CB91004432F8 /* MUITextFieldWithLabelView.swift in Sources */,
 				FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */,
 				FAD543751949C9F8004432F8 /* MUITextField.swift in Sources */,
 				FA67A94119499000004D5649 /* MUITableViewCell.swift in Sources */,
