@@ -1,5 +1,5 @@
 //
-//  MUIView.swift
+//  MUITextField.swift
 //  swifty
 //
 //  Created by 想当当 on 14-6-12.
@@ -8,13 +8,17 @@
 
 import UIKit
 
-class MUIView: UIView {
+class MUITextField: UITextField {
 
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
-        self.backgroundColor = UIColor(hex:0xefeff4)
         
+        self.layer.borderWidth = 0.4
+        self.layer.borderColor = UIColor(hex:0x999999).CGColor
+        
+        
+
     }
 
     /*

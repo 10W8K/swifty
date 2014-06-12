@@ -1,5 +1,5 @@
 //
-//  MUIView.swift
+//  MUILabel.swift
 //  swifty
 //
 //  Created by 想当当 on 14-6-12.
@@ -8,13 +8,11 @@
 
 import UIKit
 
-class MUIView: UIView {
+class MUILabel: UILabel {
 
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
-        self.backgroundColor = UIColor(hex:0xefeff4)
-        
     }
 
     /*

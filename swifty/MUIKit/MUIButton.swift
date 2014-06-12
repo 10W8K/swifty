@@ -66,7 +66,7 @@ class MUIButton: UIButton {
         
         
         
-        //self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.setTranslatesAutoresizingMaskIntoConstraints(false)
         
         //constraints
         var constraints = NSLayoutConstraint[]()

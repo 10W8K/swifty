@@ -17,6 +17,9 @@
 		FA7E7AC81945FF1F00438E91 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E7ABC1945F1A500438E91 /* DetailViewController.swift */; };
 		FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACB5411946AE3D00ACC710 /* MUIButton.swift */; };
 		FAC212FA1947088100FAC7D5 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC212F91947088100FAC7D5 /* UIColor+Hex.m */; };
+		FAD543751949C9F8004432F8 /* MUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543741949C9F8004432F8 /* MUITextField.swift */; };
+		FAD543771949CA1C004432F8 /* MUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543761949CA1C004432F8 /* MUILabel.swift */; };
+		FAD543791949CB91004432F8 /* MUITextFieldWithLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD543781949CB91004432F8 /* MUITextFieldWithLabel.swift */; };
 		FADD7CA61946A9ED00503154 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD7CA51946A9ED00503154 /* IndexViewController.swift */; };
 		FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0219499AD000B9438E /* MUIView.swift */; };
 		FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */; };
@@ -51,6 +54,9 @@
 		FAACB5411946AE3D00ACC710 /* MUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIButton.swift; path = MUIKit/MUIButton.swift; sourceTree = "<group>"; };
 		FAC212F81947088100FAC7D5 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Custom Classes/UIColor+Hex.h"; sourceTree = "<group>"; };
 		FAC212F91947088100FAC7D5 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Custom Classes/UIColor+Hex.m"; sourceTree = "<group>"; };
+		FAD543741949C9F8004432F8 /* MUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITextField.swift; path = MUIKit/MUITextField.swift; sourceTree = "<group>"; };
+		FAD543761949CA1C004432F8 /* MUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUILabel.swift; path = MUIKit/MUILabel.swift; sourceTree = "<group>"; };
+		FAD543781949CB91004432F8 /* MUITextFieldWithLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITextFieldWithLabel.swift; path = MUIKit/MUITextFieldWithLabel.swift; sourceTree = "<group>"; };
 		FADD7CA51946A9ED00503154 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = "View Controllers/IndexViewController.swift"; sourceTree = "<group>"; };
 		FAEA0C0219499AD000B9438E /* MUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIView.swift; path = MUIKit/MUIView.swift; sourceTree = "<group>"; };
 		FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseMUIViewController.swift; path = MUIKit/BaseMUIViewController.swift; sourceTree = "<group>"; };
@@ -103,8 +109,8 @@
 				FA665C5B19442D0F002F784F /* AppDelegate.swift */,
 				FA665C5D19442D0F002F784F /* Images.xcassets */,
 				FA665C5919442D0F002F784F /* Supporting Files */,
-				FA7E7ABA1945EEFC00438E91 /* RootViewController.swift */,
 				FA7E7ABC1945F1A500438E91 /* DetailViewController.swift */,
+				FA7E7ABA1945EEFC00438E91 /* RootViewController.swift */,
 				FA7E7ABE1945F89D00438E91 /* swifty-Bridging-Header.h */,
 			);
 			path = swifty;
@@ -142,6 +148,9 @@
 				FA67A94019499000004D5649 /* MUITableViewCell.swift */,
 				FAEA0C0219499AD000B9438E /* MUIView.swift */,
 				FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */,
+				FAD543741949C9F8004432F8 /* MUITextField.swift */,
+				FAD543761949CA1C004432F8 /* MUILabel.swift */,
+				FAD543781949CB91004432F8 /* MUITextFieldWithLabel.swift */,
 			);
 			name = MUIKit;
 			sourceTree = "<group>";
@@ -271,10 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD543771949CA1C004432F8 /* MUILabel.swift in Sources */,
 				FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */,
 				FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */,
 				FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */,
+				FAD543791949CB91004432F8 /* MUITextFieldWithLabel.swift in Sources */,
 				FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */,
+				FAD543751949C9F8004432F8 /* MUITextField.swift in Sources */,
 				FA67A94119499000004D5649 /* MUITableViewCell.swift in Sources */,
 				FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */,
 				FA7E7AC81945FF1F00438E91 /* DetailViewController.swift in Sources */,

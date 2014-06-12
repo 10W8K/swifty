@@ -33,13 +33,15 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
         ["UIToolbar":"工具栏"],
         ["UIActionSheet":"动作条"],
         ["UIActivityIndicatorView":"我是副文本"],
-        ["MUIButton":"按钮"]
+        ["MUIButton":"按钮"],
+        ["MUITextFieldWithLabel":"带标签的输入框"]
     ]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         let screenWidth = self.view.frame.size.width
         let screenHeight = self.view.frame.size.height
         
