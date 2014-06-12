@@ -10,21 +10,21 @@ import UIKit
 
 class MUITextFieldWithLabel: UIView {
 
-    var textField:UITextField? = UITextField(frame:CGRectMake(0.0, 0.0, 100.0, 30.0))
-    var label:UILabel? = UILabel(frame:CGRectMake(0.0, 0.0, 50.0, 30.0))
+    var textField:UITextField = UITextField(frame:CGRectMake(0.0, 0.0, 100.0, 30.0))
+    var label:UILabel = UILabel(frame:CGRectMake(0.0, 0.0, 50.0, 30.0))
     
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
         
         self.backgroundColor = UIColor(hex:0xffffff)
-        self.textField!.backgroundColor = UIColor(hex:0xffffff)
-        self.textField!.placeholder = "请输入手机号码"
-        self.textField!.font = UIFont(name:"Helvetica",size:14)
+        self.textField.backgroundColor = UIColor(hex:0xffffff)
+        self.textField.placeholder = "请输入手机号码"
+        self.textField.font = UIFont(name:"Helvetica",size:14)
         
-        self.label!.text = "手机号码"
-        self.label!.backgroundColor = UIColor(hex:0xffffff)
-        self.label!.font = UIFont(name:"Helvetica",size:14)
+        self.label.text = "手机号码"
+        self.label.backgroundColor = UIColor(hex:0xffffff)
+        self.label.font = UIFont(name:"Helvetica",size:14)
         
         self.addSubview(self.label)
         self.addSubview(self.textField)
@@ -38,8 +38,8 @@ class MUITextFieldWithLabel: UIView {
     {
         // Drawing code
         
-        self.textField!.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.label!.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.textField.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.label.setTranslatesAutoresizingMaskIntoConstraints(false)
         //constraints
         var constraints = NSLayoutConstraint[]()
         

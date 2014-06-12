@@ -156,10 +156,10 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             self.view.addSubview(button1!)
         }else if(self.title == "MUITextFieldWithLabel"){
             var textFieldWithLabel = MUITextFieldWithLabel(frame:CGRectMake(10.0, 70.0, 300.0, 40.0))
-            textFieldWithLabel.label!.text = "手机"
+            textFieldWithLabel.label.text = "手机"
             self.view.addSubview(textFieldWithLabel)
             var textFieldWithLabel1 = MUITextFieldWithLabel(frame:CGRectMake(10.0, 120.0, 300.0, 40.0))
-            textFieldWithLabel1.label!.text = "手机号码"
+            textFieldWithLabel1.label.text = "手机号码"
             self.view.addSubview(textFieldWithLabel1)
             
         }else{
