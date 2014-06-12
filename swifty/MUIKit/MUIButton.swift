@@ -22,6 +22,20 @@ class MUIButton: UIButton {
         self.addTarget(self, action: "touchDown", forControlEvents: UIControlEvents.TouchDown)
         self.addTarget(self, action: "touchUpInside", forControlEvents: UIControlEvents.TouchUpInside)
         
+        self.layer.masksToBounds = true;
+        self.contentVerticalAlignment = UIControlContentVerticalAlignment.Center;
+        self.font = UIFont(name:"Helvetica",size:16)
+        
+        self.layer.borderWidth = 0.4
+        self.layer.borderColor = UIColor(hex:0x999999).CGColor
+        self.layer.cornerRadius = 3.0
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
+        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
+        self.setTitle("确定",forState: UIControlState.Normal)
+        self.setTitle("确定", forState: UIControlState.Highlighted)
+        //self.layer.backgroundColor = UIColor.grayColor().CGColor
+        //self.layer.backgroundColor = UIColor(hex:0xdd352f).CGColor
+        
     }
     
     
@@ -33,17 +47,8 @@ class MUIButton: UIButton {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
-        //self.layer.backgroundColor = UIColor.grayColor().CGColor
-        //self.layer.backgroundColor = UIColor(hex:0xdd352f).CGColor
-        
-        self.layer.masksToBounds = true;
-        
-        
-        
-        //let gradientLayer:CAGradientLayer = CAGradientLayer()
         self.gradientLayer.bounds = self.layer.bounds
         self.gradientLayer.anchorPoint = CGPointMake(0.0, 0.0);
-        
         self.gradientLayer.colors = [
             UIColor(hex:0xff6600).CGColor,
             UIColor(hex:0xff0000).CGColor,
@@ -58,19 +63,6 @@ class MUIButton: UIButton {
         
         
         
-        self.layer.borderWidth = 0.4
-        self.layer.borderColor = UIColor(hex:0x999999).CGColor
-        self.layer.cornerRadius = 3.0
-        
-        self.font = UIFont(name:"Helvetica",size:16)
-        self.contentVerticalAlignment = UIControlContentVerticalAlignment.Center;
-        
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Normal)
-        self.setTitleColor(UIColor(hex:0xffffff), forState: UIControlState.Highlighted)
-
-        
-        self.setTitle("确定",forState: UIControlState.Normal)
-        self.setTitle("确定", forState: UIControlState.Highlighted)
         
         
         
@@ -107,7 +99,7 @@ class MUIButton: UIButton {
         
         self.superview.addConstraints(constraints)
         
-    
+
     }
     
     

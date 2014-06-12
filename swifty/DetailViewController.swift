@@ -8,14 +8,19 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     override func viewDidLoad() {
-        //super.viewDidLoad()
+        
+        
+        super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     
-        self.view!.backgroundColor = UIColor.whiteColor()
+        //self.view!.backgroundColor = UIColor.whiteColor()
+        
+        
+        
         //NSLog(self.title);
         if(self.title == "UILabel"){
             // Label
@@ -143,12 +148,19 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             activityIndicatorView.startAnimating()
             self.view.addSubview(activityIndicatorView)
         }else if(self.title == "MUIButton"){
-            //var button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
-            let button1:MUIButton? = MUIButton(frame:CGRectMake(10.0, 200.0, 300.0, 50.0))
-            
-            
-            
+            var button1:MUIButton? = MUIButton(frame:CGRectMake(10.0, 200.0, 300.0, 50.0))
+            button1!.addTarget(self, action: "touchDown", forControlEvents: UIControlEvents.TouchDown)
+            button1!.font = UIFont(name:"Helvetica",size:24)
+            button1!.setTitle("OK",forState: UIControlState.Normal)
+            button1!.setTitle("OK", forState: UIControlState.Highlighted)
             self.view.addSubview(button1!)
+        }else if(self.title == "MUITextFieldWithLabelView"){
+            var textFieldWithLabel = MUITextFieldWithLabelView(frame:CGRectMake(10.0, 70.0, 300.0, 40.0))
+            textFieldWithLabel.label.text = "手机"
+            self.view.addSubview(textFieldWithLabel)
+            var textFieldWithLabel1 = MUITextFieldWithLabelView(frame:CGRectMake(10.0, 120.0, 300.0, 40.0))
+            textFieldWithLabel1.label.text = "手机号码"
+            self.view.addSubview(textFieldWithLabel1)
             
         }else if(self.title == "MUInputBox"){
             
@@ -169,6 +181,8 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             self.view.addSubview(textField)
 
             self.view.addSubview(inputBox1)
+        }else{
+            
         }
         
     }
@@ -242,6 +256,10 @@ class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         var alertController = UIAlertController(title: "ActionSheet", message: "Message", preferredStyle: UIAlertControllerStyle.ActionSheet)
         alertController.addAction(UIAlertAction(title: "Go Back", style: UIAlertActionStyle.Destructive, handler: nil))
         self.presentViewController(alertController, animated: true, completion:nil)
+    }
+    
+    func touchDown(){
+        NSLog("touchDown")
     }
 
 }

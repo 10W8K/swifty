@@ -21,11 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor = UIColor.whiteColor()
-
+        
 
         var rootViewController:RootViewController? = RootViewController()
+    
         self.rootNavigationController = UINavigationController(rootViewController:rootViewController!)
-
+        //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x000000)
+        //self.rootNavigationController!.navigationBar.titleTextAttributes = UIColor(hex:0x000000)
+        
         
         // Override point for customization after application launch.
         self.window!.rootViewController = self.rootNavigationController;
