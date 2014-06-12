@@ -35,6 +35,7 @@ class MUIButton: UIButton {
         self.setTitle("确定", forState: UIControlState.Highlighted)
         //self.layer.backgroundColor = UIColor.grayColor().CGColor
         //self.layer.backgroundColor = UIColor(hex:0xdd352f).CGColor
+        
     }
     
     

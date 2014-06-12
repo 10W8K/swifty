@@ -10,6 +10,7 @@
 		FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665C5B19442D0F002F784F /* AppDelegate.swift */; };
 		FA665C5E19442D0F002F784F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA665C5D19442D0F002F784F /* Images.xcassets */; };
 		FA665C6A19442D0F002F784F /* swiftyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665C6919442D0F002F784F /* swiftyTests.swift */; };
+		FA67A94119499000004D5649 /* MUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67A94019499000004D5649 /* MUITableViewCell.swift */; };
 		FA7E7ABB1945EEFC00438E91 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E7ABA1945EEFC00438E91 /* RootViewController.swift */; };
 		FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E7AC21945FA1F00438E91 /* SwiftMath.swift */; };
 		FA7E7AC61945FD8C00438E91 /* swift-hero@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA7E7AC51945FD8C00438E91 /* swift-hero@2x.png */; };
@@ -17,6 +18,8 @@
 		FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACB5411946AE3D00ACC710 /* MUIButton.swift */; };
 		FAC212FA1947088100FAC7D5 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC212F91947088100FAC7D5 /* UIColor+Hex.m */; };
 		FADD7CA61946A9ED00503154 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD7CA51946A9ED00503154 /* IndexViewController.swift */; };
+		FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0219499AD000B9438E /* MUIView.swift */; };
+		FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */; };
 		FD9C20C21946F7F300700C91 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9C20C11946F7F300700C91 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +41,7 @@
 		FA665C6319442D0F002F784F /* swiftyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swiftyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA665C6819442D0F002F784F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA665C6919442D0F002F784F /* swiftyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftyTests.swift; sourceTree = "<group>"; };
+		FA67A94019499000004D5649 /* MUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITableViewCell.swift; path = MUIKit/MUITableViewCell.swift; sourceTree = "<group>"; };
 		FA7E7ABA1945EEFC00438E91 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		FA7E7ABC1945F1A500438E91 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FA7E7ABE1945F89D00438E91 /* swifty-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swifty-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		FAC212F81947088100FAC7D5 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Custom Classes/UIColor+Hex.h"; sourceTree = "<group>"; };
 		FAC212F91947088100FAC7D5 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Custom Classes/UIColor+Hex.m"; sourceTree = "<group>"; };
 		FADD7CA51946A9ED00503154 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = "View Controllers/IndexViewController.swift"; sourceTree = "<group>"; };
+		FAEA0C0219499AD000B9438E /* MUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIView.swift; path = MUIKit/MUIView.swift; sourceTree = "<group>"; };
+		FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseMUIViewController.swift; path = MUIKit/BaseMUIViewController.swift; sourceTree = "<group>"; };
 		FD9C20C11946F7F300700C91 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				FAACB5411946AE3D00ACC710 /* MUIButton.swift */,
+				FA67A94019499000004D5649 /* MUITableViewCell.swift */,
+				FAEA0C0219499AD000B9438E /* MUIView.swift */,
+				FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */,
 			);
 			name = MUIKit;
 			sourceTree = "<group>";
@@ -265,9 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */,
 				FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */,
+				FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */,
 				FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */,
 				FD9C20C21946F7F300700C91 /* MyTableViewCell.swift in Sources */,
+				FA67A94119499000004D5649 /* MUITableViewCell.swift in Sources */,
 				FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */,
 				FA7E7AC81945FF1F00438E91 /* DetailViewController.swift in Sources */,
 				FAC212FA1947088100FAC7D5 /* UIColor+Hex.m in Sources */,

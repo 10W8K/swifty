@@ -8,14 +8,19 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     override func viewDidLoad() {
-        //super.viewDidLoad()
+        
+        
+        super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     
-        self.view!.backgroundColor = UIColor.whiteColor()
+        //self.view!.backgroundColor = UIColor.whiteColor()
+        
+        
+        
         //NSLog(self.title);
         if(self.title == "UILabel"){
             // Label
