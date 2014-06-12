@@ -17,6 +17,7 @@
 		FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAACB5411946AE3D00ACC710 /* MUIButton.swift */; };
 		FAC212FA1947088100FAC7D5 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC212F91947088100FAC7D5 /* UIColor+Hex.m */; };
 		FADD7CA61946A9ED00503154 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD7CA51946A9ED00503154 /* IndexViewController.swift */; };
+		FD2417701948A48100C29C87 /* textfieldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD24176F1948A48100C29C87 /* textfieldTableViewController.swift */; };
 		FD9C20C21946F7F300700C91 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9C20C11946F7F300700C91 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		FAC212F81947088100FAC7D5 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Custom Classes/UIColor+Hex.h"; sourceTree = "<group>"; };
 		FAC212F91947088100FAC7D5 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Custom Classes/UIColor+Hex.m"; sourceTree = "<group>"; };
 		FADD7CA51946A9ED00503154 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = "View Controllers/IndexViewController.swift"; sourceTree = "<group>"; };
+		FD24176F1948A48100C29C87 /* textfieldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = textfieldTableViewController.swift; path = "View Controllers/textfieldTableViewController.swift"; sourceTree = "<group>"; };
 		FD9C20C11946F7F300700C91 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				FADD7CA51946A9ED00503154 /* IndexViewController.swift */,
+				FD24176F1948A48100C29C87 /* textfieldTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */,
 				FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */,
+				FD2417701948A48100C29C87 /* textfieldTableViewController.swift in Sources */,
 				FD9C20C21946F7F300700C91 /* MyTableViewCell.swift in Sources */,
 				FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */,
 				FA7E7AC81945FF1F00438E91 /* DetailViewController.swift in Sources */,
