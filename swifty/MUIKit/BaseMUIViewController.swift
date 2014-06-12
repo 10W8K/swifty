@@ -18,13 +18,14 @@ class BaseMUIViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //
+        //let screenWidth = self.view.frame.size.width
+        //let screenHeight = self.view.frame.size.height
+        //self.view = MUIView(frame:CGRectMake(0,0,screenWidth,screenHeight))
+        //or
+        self.view = MUIView(frame:UIScreen.mainScreen().bounds)
         
-        let screenWidth = self.view.frame.size.width
-        let screenHeight = self.view.frame.size.height
-        self.view = MUIView(frame:CGRectMake(0,0,screenWidth,screenHeight))
-        
-        //UIScreen.mainScreen().bounds
-
+        //
         // Do any additional setup after loading the view.
     }
 
