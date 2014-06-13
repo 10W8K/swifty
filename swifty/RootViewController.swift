@@ -15,6 +15,9 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
     var cellIndentifier = "cellIndentifier"
     
     var itemArray = [
+        ["MUIButton":"按钮"],
+        ["MUInputBox":"输入框"],
+        ["MUITextFieldWithLabelView":"带标签的输入框"],
         ["UILabel":"标签"],
         ["UIButton":"按钮"],
         ["UIImageView":"图片"],
@@ -32,9 +35,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
         ["UITextView":"文本显示"],
         ["UIToolbar":"工具栏"],
         ["UIActionSheet":"动作条"],
-        ["UIActivityIndicatorView":"我是副文本"],
-        ["MUIButton":"按钮"],
-        ["MUITextFieldWithLabelView":"带标签的输入框"]
+        ["UIActivityIndicatorView":"我是副文本"]
     ]
     
     
@@ -50,7 +51,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
 
         // Do any additional setup after loading the view.
     
-        self.title = "Swift"
+        self.title = "Swift Demo"
         
         self.tableView = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
@@ -78,15 +79,15 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
         for(itemkey,itemval) in itemArray[indexPath.row] {
-            cell.textLabel.text = itemkey
-            cell.detailTextLabel.text = itemval
+            cell.textLabel.text = itemval
+            cell.detailTextLabel.text = itemkey
         }
         
         return cell
     }
     
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        return 60.0
+        return 56.0
     }
     
     
@@ -94,12 +95,23 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
         
-        var detailViewController = DetailViewController()
+
         for itemkey in itemArray[indexPath.row].keys {
-            detailViewController.title = itemkey
+            if(itemkey == "MUInputBox") {
+//                var textfieldTableView = textfieldTableViewController(nibName:nil,bundle:nil)
+                var textfieldTableView = textfieldTableViewController()
+                textfieldTableView.title = itemkey
+                self.navigationController.pushViewController(textfieldTableView, animated:true)
+
+            } else {
+                var detailViewController = DetailViewController()
+                detailViewController.title = itemkey
+                self.navigationController.pushViewController(detailViewController, animated:true)
+            }
+
         }
 
         //detailViewController.title = self.items?.objectAtIndex(indexPath.row)  as String
-        self.navigationController.pushViewController(detailViewController, animated:true)
+//        self.navigationController.pushViewController(detailViewController, animated:true)
     }
 }

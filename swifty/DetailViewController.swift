@@ -162,6 +162,25 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             textFieldWithLabel1.label.text = "手机号码"
             self.view.addSubview(textFieldWithLabel1)
             
+        }else if(self.title == "MUInputBox"){
+            
+            println(self.title)
+            
+            var inputBox1 = UITextField(frame:CGRectMake(10.0, 200.0, 300.0, 50.0))
+            
+            inputBox1.backgroundColor = UIColor.whiteColor()
+            inputBox1.placeholder = "nimamamam"
+            inputBox1.font = UIFont(name:"Helvetica",size:16)
+            inputBox1.textColor = UIColor.blueColor()
+
+            
+//            inputBox1.text = "dsda"
+            var textField = UITextField(frame:CGRectMake(60.0, 120.0, 200.0, 30.0))
+            textField.backgroundColor = UIColor.lightGrayColor()
+            textField.placeholder = "input text"
+            self.view.addSubview(textField)
+
+            self.view.addSubview(inputBox1)
         }else{
             
         }

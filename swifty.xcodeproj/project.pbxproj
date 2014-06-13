@@ -23,6 +23,7 @@
 		FADD7CA61946A9ED00503154 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD7CA51946A9ED00503154 /* IndexViewController.swift */; };
 		FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0219499AD000B9438E /* MUIView.swift */; };
 		FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */; };
+		FD3B38E9194A0DFA00D08C7C /* textfieldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B38E8194A0DFA00D08C7C /* textfieldTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		FADD7CA51946A9ED00503154 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = "View Controllers/IndexViewController.swift"; sourceTree = "<group>"; };
 		FAEA0C0219499AD000B9438E /* MUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIView.swift; path = MUIKit/MUIView.swift; sourceTree = "<group>"; };
 		FAEA0C0619499EEA00B9438E /* BaseMUIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseMUIViewController.swift; path = MUIKit/BaseMUIViewController.swift; sourceTree = "<group>"; };
+		FD3B38E8194A0DFA00D08C7C /* textfieldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = textfieldTableViewController.swift; path = "View Controllers/textfieldTableViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		FADD7CA41946A9A400503154 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FD3B38E8194A0DFA00D08C7C /* textfieldTableViewController.swift */,
 				FADD7CA51946A9ED00503154 /* IndexViewController.swift */,
 			);
 			name = "View Controllers";
@@ -285,6 +288,7 @@
 				FAACB5421946AE3D00ACC710 /* MUIButton.swift in Sources */,
 				FAEA0C0719499EEA00B9438E /* BaseMUIViewController.swift in Sources */,
 				FAD543791949CB91004432F8 /* MUITextFieldWithLabelView.swift in Sources */,
+				FD3B38E9194A0DFA00D08C7C /* textfieldTableViewController.swift in Sources */,
 				FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */,
 				FAD543751949C9F8004432F8 /* MUITextField.swift in Sources */,
 				FA67A94119499000004D5649 /* MUITableViewCell.swift in Sources */,
