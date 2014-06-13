@@ -45,11 +45,11 @@
 		FA665C6819442D0F002F784F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA665C6919442D0F002F784F /* swiftyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftyTests.swift; sourceTree = "<group>"; };
 		FA67A94019499000004D5649 /* MUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITableViewCell.swift; path = MUIKit/MUITableViewCell.swift; sourceTree = "<group>"; };
+		FA69B2B3194A9314008C061F /* MathSum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathSum.m; path = "Custom Classes/MathSum.m"; sourceTree = "<group>"; };
+		FA69B2B4194A9314008C061F /* MathSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathSum.h; path = "Custom Classes/MathSum.h"; sourceTree = "<group>"; };
 		FA7E7ABA1945EEFC00438E91 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		FA7E7ABC1945F1A500438E91 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		FA7E7ABE1945F89D00438E91 /* swifty-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "swifty-Bridging-Header.h"; sourceTree = "<group>"; };
-		FA7E7ABF1945F89D00438E91 /* MathSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathSum.h; sourceTree = "<group>"; };
-		FA7E7AC01945F89D00438E91 /* MathSum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathSum.m; sourceTree = "<group>"; };
 		FA7E7AC21945FA1F00438E91 /* SwiftMath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftMath.swift; sourceTree = "<group>"; };
 		FA7E7AC51945FD8C00438E91 /* swift-hero@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swift-hero@2x.png"; sourceTree = "<group>"; };
 		FAACB5411946AE3D00ACC710 /* MUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIButton.swift; path = MUIKit/MUIButton.swift; sourceTree = "<group>"; };
@@ -160,10 +160,10 @@
 		FAC212F71947083600FAC7D5 /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FA69B2B3194A9314008C061F /* MathSum.m */,
+				FA69B2B4194A9314008C061F /* MathSum.h */,
 				FAC212F81947088100FAC7D5 /* UIColor+Hex.h */,
 				FAC212F91947088100FAC7D5 /* UIColor+Hex.m */,
-				FA7E7ABF1945F89D00438E91 /* MathSum.h */,
-				FA7E7AC01945F89D00438E91 /* MathSum.m */,
 				FA7E7AC21945FA1F00438E91 /* SwiftMath.swift */,
 			);
 			name = "Custom Classes";
