@@ -1,19 +1,18 @@
 //
-//  MUIView.swift
+//  FormViewController.swift
 //  swifty
 //
-//  Created by 想当当 on 14-6-12.
+//  Created by 想当当 on 14-6-13.
 //  Copyright (c) 2014年 想当当. All rights reserved.
 //
 
 import UIKit
 
-class MUIView: UIView {
+class FormViewController: UIView {
 
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
-        self.backgroundColor = UIColor(hex:0xefeff4)
     }
 
     /*

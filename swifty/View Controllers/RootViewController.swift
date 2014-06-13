@@ -18,6 +18,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
         ["MUIButton":"按钮"],
         ["MUInputBox":"输入框"],
         ["MUITextFieldWithLabelView":"带标签的输入框"],
+        ["MUIFormView":"表单"],
         ["UILabel":"标签"],
         ["UIButton":"按钮"],
         ["UIImageView":"图片"],
@@ -78,7 +79,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
             
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
-        for(itemkey,itemval) in itemArray[indexPath.row] {
+        for(itemkey,itemval) in self.itemArray[indexPath.row] {
             cell.textLabel.text = itemval
             cell.detailTextLabel.text = itemkey
         }
@@ -96,7 +97,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
         
 
-        for itemkey in itemArray[indexPath.row].keys {
+        for itemkey in self.itemArray[indexPath.row].keys {
             if(itemkey == "MUInputBox") {
 //                var textfieldTableView = textfieldTableViewController(nibName:nil,bundle:nil)
                 var textfieldTableView = textfieldTableViewController()

@@ -8,8 +8,16 @@
 
 import UIKit
 
-class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource {
 
+    
+    var tableView: MUITableView?
+    var cellIndentifier = "cellIndentifier"
+    var itemArray = [
+        ["手机"],
+        ["手机号码"]
+    ]
+    
     override func viewDidLoad() {
         
         
@@ -19,7 +27,7 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
     
         //self.view!.backgroundColor = UIColor.whiteColor()
         
-        
+        NSLog(self.title)
         
         //NSLog(self.title);
         if(self.title == "UILabel"){
@@ -181,6 +189,30 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             self.view.addSubview(textField)
 
             self.view.addSubview(inputBox1)
+        }else if(self.title == "MUIFormView"){
+            //println("MUIFormView")
+            
+            self.tableView = MUITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
+            self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
+            self.tableView!.delegate = self
+            self.tableView!.dataSource = self
+            //self.tableView!.separatorStyle  = UITableViewCellSeparatorStyle.None
+            self.tableView!.separatorInset = UIEdgeInsetsZero
+            //self.tableView!.userInteractionEnabled = false
+            self.tableView!.scrollEnabled = false
+            self.view?.addSubview(self.tableView)
+            
+
+            //println(self.navigationController.navigationBar.frame)
+            //CGRect frame = self.tableView.frame;
+            //frame.size.height = self.tableView.contentSize.height;
+            //self.tableView.frame = frame;
+            
+            
+            
+
+            
+            
         }else{
             
         }
@@ -261,5 +293,47 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
     func touchDown(){
         NSLog("touchDown")
     }
+    
+    
+    // UITableViewDataSource Methods
+    func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+        return self.itemArray.count
+    }
+    
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MUITableViewCell!
+        
+        //remote the arrow
+        cell.accessoryType = UITableViewCellAccessoryType.None
+        
+        
+        for(item) in self.itemArray[indexPath.row] {
+            var contentView = MUITextFieldWithLabelView(frame:cell.contentView.frame)
+            contentView.label.text = item
+            cell.contentView.insertSubview(contentView, atIndex:0)
+        }
+        
+        //tableView自适应的高度在MUITableView内使用autolayout做了处理
+        //self.tableView!.frame.size.height = self.tableView!.contentSize.height + 64
+        
+        return cell
+        
+        
+    }
+    
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        return 40.0
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        //println("updateViewConstraints")
+    }
+
 
 }
