@@ -335,5 +335,9 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         //println("updateViewConstraints")
     }
 
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
+    {
+        println("touchesBegan")
+    }
 
 }

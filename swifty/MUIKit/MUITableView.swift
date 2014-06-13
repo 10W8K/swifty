@@ -21,8 +21,10 @@ class MUITableView: UITableView {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
+        
 
-
+        self.scrollEnabled = false
+        
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
         //constraints
         var constraints = NSLayoutConstraint[]()
@@ -63,7 +65,19 @@ class MUITableView: UITableView {
 
         self.superview.removeConstraints(self.superview.constraints())
         self.superview.addConstraints(constraints)
+        
+        //self.scrollRectToVisible(CGRectMake(0,0,1,1), animated: false)
+        /**
+         * bugfix
+         * 输入框聚焦,唤起键盘
+         * 屏幕发生旋转, 出现了输入框被往上顶出的现象, 即UITableView产生了scroll
+         * 使用下面这句搞定
+         */
+        self.setContentOffset(CGPointZero,animated:false)
+        
+    
     }
+    
     
 
 
