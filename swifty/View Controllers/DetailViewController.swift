@@ -224,6 +224,7 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             
             
         }else if(self.title == "MUILabelWithIconFont"){
+            //http://ued.alimama.com/posts/964
             let label = MUILabel(frame:self.view.bounds)
             let iconfont = UIFont(name:"rei",size:34)
             label.font = iconfont
