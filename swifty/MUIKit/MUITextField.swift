@@ -8,17 +8,27 @@
 
 import UIKit
 
-class MUITextField: UITextField {
+class MUITextField: UITextField, UITextFieldDelegate {
 
     init(frame: CGRect) {
         super.init(frame: frame)
-        // Initialization code
+        // Initialization codes
+        self.layer.borderWidth = 0
+        self.delegate = self
         
-        self.layer.borderWidth = 0.4
-        self.layer.borderColor = UIColor(hex:0x999999).CGColor
-        
-        
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool{
+        textField.resignFirstResponder();
+        return true
+    }
+    
 
+    
+    func textFieldDidBeginEditing(textField: UITextField!){
+        self.becomeFirstResponder()
+        NSNotificationCenter.defaultCenter().postNotificationName("firstResponder", object: self)
     }
 
     /*
@@ -29,5 +39,8 @@ class MUITextField: UITextField {
         // Drawing code
     }
     */
+
+    
+
 
 }

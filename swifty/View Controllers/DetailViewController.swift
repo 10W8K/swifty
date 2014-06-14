@@ -17,11 +17,14 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         ["手机"],
         ["手机号码"]
     ]
+
     
     override func viewDidLoad() {
         
-        
+    
         super.viewDidLoad()
+        
+        
 
         // Do any additional setup after loading the view.
     
@@ -219,7 +222,9 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         
     }
     
-    override func viewWillAppear(animated: Bool) {}
+    override func viewWillAppear(animated: Bool) {
+        
+    }
     override func viewDidAppear(animated: Bool) {}
     override func viewWillDisappear(animated: Bool) {}
     override func viewDidDisappear(animated: Bool) {}
@@ -334,10 +339,5 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         super.updateViewConstraints()
         //println("updateViewConstraints")
     }
-
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
-    {
-        println("touchesBegan")
-    }
-
+    
 }

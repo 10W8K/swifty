@@ -10,8 +10,8 @@ import UIKit
 
 class MUITextFieldWithLabelView: UIView {
 
-    var textField:UITextField = UITextField(frame:CGRectMake(0.0, 0.0, 100.0, 30.0))
-    var label:UILabel = UILabel(frame:CGRectMake(0.0, 0.0, 50.0, 30.0))
+    var textField:MUITextField = MUITextField(frame:CGRectMake(0.0, 0.0, 100.0, 30.0))
+    var label:MUILabel = MUILabel(frame:CGRectMake(0.0, 0.0, 50.0, 30.0))
     
     init(frame: CGRect) {
         super.init(frame: frame)
