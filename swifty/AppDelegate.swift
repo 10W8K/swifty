@@ -31,7 +31,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var rootViewController:RootViewController? = RootViewController()
     
         self.rootNavigationController = UINavigationController(rootViewController:rootViewController!)
-        //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x000000)
+        
+        //navigationBar settings
+        //self.rootNavigationController!.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.whiteColor(), forKey: NSForegroundColorAttributeName)
+        //self.rootNavigationController!.navigationBar.barTintColor = UIColor(hex:0x1A1F21)
+        //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
+        //self.rootNavigationController!.navigationBar.alpha = 1.0
+        //self.rootNavigationController!.navigationBar.translucent = false
+        
+
+        
+        //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
         //self.rootNavigationController!.navigationBar.titleTextAttributes = UIColor(hex:0x000000)
         
         
