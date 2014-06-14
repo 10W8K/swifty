@@ -15,6 +15,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
     var cellIndentifier = "cellIndentifier"
     
     var itemArray = [
+        ["MUILabelWithIconFont":"iconfont标签"],
         ["MUIButton":"按钮"],
         ["MUInputBox":"输入框"],
         ["MUITextFieldWithLabelView":"带标签的输入框"],

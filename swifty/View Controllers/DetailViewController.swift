@@ -41,6 +41,17 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             label.font = UIFont.systemFontOfSize(36)
             label.text = "Hello, Swift"
             self.view.addSubview(label)
+            
+
+            
+            
+//            UILabel * fontLabel = [[UILabel alloc] initWithFrame:self.view.bounds];
+//            UIFont *iconfont = [UIFont fontWithName:@"uxIconFont" size: 34];
+//            label.font = iconfont;
+//            label.text = @"\U00003439 \U000035ad \U000035ae \U000035af \U000035eb \U000035ec";
+//            [self.view addSubview: label];
+            
+            
         }else if(self.title == "UIButton"){
             // Button
             var button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
@@ -212,10 +223,14 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             //self.tableView.frame = frame;
             
             
-            
-
-            
-            
+        }else if(self.title == "MUILabelWithIconFont"){
+            let label = MUILabel(frame:self.view.bounds)
+            let iconfont = UIFont(name:"rei",size:34)
+            label.font = iconfont
+            label.textColor = UIColor(hex:0xff6600)
+            label.textAlignment = NSTextAlignment.Center
+            label.text = "\U0000F001"
+            self.view.addSubview(label)
         }else{
             
         }
