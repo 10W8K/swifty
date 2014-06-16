@@ -25,7 +25,7 @@ class MUITableView: UITableView {
 
         self.scrollEnabled = false
         
-        self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        //self.setTranslatesAutoresizingMaskIntoConstraints(false)
         //constraints
         var constraints = NSLayoutConstraint[]()
         
@@ -43,7 +43,15 @@ class MUITableView: UITableView {
             toItem: self.superview,
             attribute: NSLayoutAttribute.Top,
             multiplier: 1.0,
-            constant: 0.0)
+            constant: 60.0)
+        
+//        constraints += NSLayoutConstraint(item: self,
+//            attribute: NSLayoutAttribute.Bottom,
+//            relatedBy: NSLayoutRelation.Equal,
+//            toItem: self.superview,
+//            attribute: NSLayoutAttribute.Top,
+//            multiplier: 1.0,
+//            constant: self.contentSize.height + (self.window!.rootViewController.interfaceOrientation == UIInterfaceOrientation.Portrait ? 64.0 : 32.0) + 148)
         
         constraints += NSLayoutConstraint(item: self,
             attribute: NSLayoutAttribute.Bottom,
@@ -51,9 +59,9 @@ class MUITableView: UITableView {
             toItem: self.superview,
             attribute: NSLayoutAttribute.Top,
             multiplier: 1.0,
-            constant: self.contentSize.height + (self.window!.rootViewController.interfaceOrientation == UIInterfaceOrientation.Portrait ? 64.0 : 32.0))
+            constant: self.contentSize.height)
         
-
+        
         constraints += NSLayoutConstraint(item: self,
             attribute: NSLayoutAttribute.Right,
             relatedBy: NSLayoutRelation.Equal,

@@ -29,30 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor = UIColor.whiteColor()
         
-        
-        
         self.rootViewController = RootViewController()
         
-        
-        
-        
-        var indexViewController:IndexViewController? = IndexViewController()
     
-        self.rootNavigationController = UINavigationController(rootViewController:indexViewController!)
-        
-        //navigationBar settings
-        //self.rootNavigationController!.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.whiteColor(), forKey: NSForegroundColorAttributeName)
-        //self.rootNavigationController!.navigationBar.barTintColor = UIColor(hex:0x1A1F21)
-        //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
-        //self.rootNavigationController!.navigationBar.alpha = 1.0
-        //self.rootNavigationController!.navigationBar.translucent = false
-        
-
-        
-        //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
-        //self.rootNavigationController!.navigationBar.titleTextAttributes = UIColor(hex:0x000000)
-        
-        
         // Override point for customization after application launch.
         self.window!.rootViewController = self.rootViewController;
         self.window!.makeKeyAndVisible()
@@ -90,6 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
     {
+        println("....")
         if(self.firstResponder !== nil){
             self.firstResponder!.resignFirstResponder()
             self.firstResponder = nil
@@ -98,7 +78,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func handleFirstResponder(notification: NSNotification){
+        println("notification handleFirstResponder")
         self.firstResponder = notification.object
+        println(self.firstResponder)
     }
     
     

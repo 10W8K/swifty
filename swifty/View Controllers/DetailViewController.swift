@@ -197,6 +197,7 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             //println("MUIFormView")
             //如果使用UITableView做Form,最好设置style:UITableViewStyle.Grouped
             self.tableView = MUITableView(frame:self.view.frame, style:UITableViewStyle.Grouped)
+            //self.tableView = MUITableView(frame:CGRect(x:0.0,y:120.0,width:320.0,height:80.0), style:UITableViewStyle.Grouped)
             self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
             self.tableView!.delegate = self
             self.tableView!.dataSource = self
@@ -319,7 +320,7 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MUITableViewCell!
         
-        //remote the arrow
+        //remove the arrow
         cell.accessoryType = UITableViewCellAccessoryType.None
         
         
@@ -345,7 +346,8 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         super.updateViewConstraints()
         //println("updateViewConstraints")
     }
-    
+
+
 
     
 }

@@ -97,7 +97,7 @@ class MUIButton: UIButton {
             toItem: self.superview,
             attribute: NSLayoutAttribute.Bottom,
             multiplier: 1.0,
-            constant: -50.0)
+            constant: -100.0)
         
         
         self.superview.addConstraints(constraints)

@@ -11,19 +11,22 @@ import UIKit
 class RootViewController: UITabBarController {
 
     var rootNavigationController: UINavigationController? ,
+        //firstResponder: AnyObject?,
         indexViewController: IndexViewController? ,
         formViewController: FormViewController?
     
+    //var notificationCenter = NSNotificationCenter.defaultCenter()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         
         self.indexViewController = IndexViewController()
         self.rootNavigationController = UINavigationController(rootViewController:indexViewController!)
         //self.rootNavigationController!.tabBarItem.image = UIImage(named: "swift-hero.png")
-        //self.rootNavigationController!.tabBarItem = UITabBarItem(title: "首页", image:UIImage(named:"swift-hero.png"), selectedImage:nil)
+        self.rootNavigationController!.tabBarItem = UITabBarItem(title: "首页", image:UIImage(named:"Home.png"), selectedImage:nil)
         //self.rootNavigationController!.tabBarItem.imageInsets = UIEdgeInsetsMake(6, 0, -6, 0);
 
         
@@ -42,7 +45,8 @@ class RootViewController: UITabBarController {
         //self.delegate = self
         
         self.formViewController = FormViewController()
-        self.formViewController!.tabBarItem.title = "表单"
+        self.formViewController!.tabBarItem.title = "足球"
+        self.formViewController!.tabBarItem = UITabBarItem(title: "足球", image:UIImage(named:"Football.png"), selectedImage:nil)
         
         self.setViewControllers([self.rootNavigationController!,self.formViewController!],animated:true)
         //self.viewControllers = [self.rootNavigationController!]
@@ -65,5 +69,25 @@ class RootViewController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func viewWillAppear(animated: Bool) {
+        //self.notificationCenter.addObserver(self, selector: "handleFirstResponder:", name: "firstResponder", object: nil)
+    }
+    
+//    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
+//    {
+//        println(".....");
+//        /**
+//        if(self.firstResponder !== nil){
+//            self.firstResponder!.resignFirstResponder()
+//            self.firstResponder = nil
+//        }*/
+//        
+//    }
+//    
+//    func handleFirstResponder(notification: NSNotification){
+//        println("notification handleFirstResponder")
+//        self.firstResponder = notification.object
+//    }
 
 }

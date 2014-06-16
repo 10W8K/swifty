@@ -27,8 +27,15 @@ class MUITextField: UITextField, UITextFieldDelegate {
 
     
     func textFieldDidBeginEditing(textField: UITextField!){
-        self.becomeFirstResponder()
+        //self.becomeFirstResponder()
+        
+        println("postNotificationName firstResponder...")
         NSNotificationCenter.defaultCenter().postNotificationName("firstResponder", object: self)
+    }
+    
+    func textFieldShouldEndEditing(textField: UITextField!) -> Bool{
+        println("textFieldShouldEndEditing")
+        return true
     }
 
     /*
