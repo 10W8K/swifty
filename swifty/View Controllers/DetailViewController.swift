@@ -195,8 +195,8 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             self.view.addSubview(inputBox1)
         }else if(self.title == "MUIFormView"){
             //println("MUIFormView")
-            
-            self.tableView = MUITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
+            //如果使用UITableView做Form,最好设置style:UITableViewStyle.Grouped
+            self.tableView = MUITableView(frame:self.view.frame, style:UITableViewStyle.Grouped)
             self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
             self.tableView!.delegate = self
             self.tableView!.dataSource = self
