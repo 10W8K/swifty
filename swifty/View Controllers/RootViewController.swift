@@ -53,7 +53,7 @@ class RootViewController: BaseMUIViewController, UITableViewDelegate, UITableVie
 
         // Do any additional setup after loading the view.
     
-        self.title = "Swift Demo"
+        self.title = "Swifty"
         
         self.tableView = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
