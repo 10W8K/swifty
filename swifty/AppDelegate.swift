@@ -13,9 +13,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
-    var window: UIWindow?
-    var rootNavigationController: UINavigationController?
-    var firstResponder: AnyObject?
+    var window: UIWindow? ,
+        firstResponder: AnyObject? ,
+        rootNavigationController: UINavigationController? ,
+        rootViewController: RootViewController?
     
     var notificationCenter = NSNotificationCenter.defaultCenter()
     
@@ -28,9 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         self.window!.backgroundColor = UIColor.whiteColor()
         
-        var rootViewController:RootViewController? = RootViewController()
+        
+        
+        self.rootViewController = RootViewController()
+        
+        
+        
+        
+        var indexViewController:IndexViewController? = IndexViewController()
     
-        self.rootNavigationController = UINavigationController(rootViewController:rootViewController!)
+        self.rootNavigationController = UINavigationController(rootViewController:indexViewController!)
         
         //navigationBar settings
         //self.rootNavigationController!.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.whiteColor(), forKey: NSForegroundColorAttributeName)
@@ -46,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Override point for customization after application launch.
-        self.window!.rootViewController = self.rootNavigationController;
+        self.window!.rootViewController = self.rootViewController;
         self.window!.makeKeyAndVisible()
         return true
     }

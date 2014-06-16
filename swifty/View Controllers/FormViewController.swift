@@ -2,25 +2,37 @@
 //  FormViewController.swift
 //  swifty
 //
-//  Created by 想当当 on 14-6-13.
+//  Created by 想当当 on 14-6-16.
 //  Copyright (c) 2014年 想当当. All rights reserved.
 //
 
 import UIKit
 
-class FormViewController: UIView {
+class FormViewController: UIViewController {
 
-    init(frame: CGRect) {
-        super.init(frame: frame)
-        // Initialization code
+
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+        
+        //self.title = "表单"
     }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
     /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect)
-    {
-        // Drawing code
+    // #pragma mark - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        // Pass the selected object to the new view controller.
     }
     */
 
