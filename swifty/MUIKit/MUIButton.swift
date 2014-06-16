@@ -47,7 +47,10 @@ class MUIButton: UIButton {
     override func drawRect(rect: CGRect)
     {
         // Drawing code
-        self.gradientLayer.bounds = self.layer.bounds
+        println(self.layer.bounds.origin.x)
+        self.gradientLayer.bounds = CGRect(x:self.layer.bounds.origin.x, y:self.layer.bounds.origin.y, width:self.layer.bounds.size.width * 2,height:self.layer.bounds.size.height)
+        
+
         self.gradientLayer.anchorPoint = CGPointMake(0.0, 0.0);
         self.gradientLayer.colors = [
             UIColor(hex:0xff6600).CGColor,
@@ -99,7 +102,6 @@ class MUIButton: UIButton {
         
         self.superview.addConstraints(constraints)
         
-
     }
     
     
@@ -136,6 +138,4 @@ class MUIButton: UIButton {
 
     }
     
-
-
 }

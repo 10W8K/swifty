@@ -92,6 +92,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func handleFirstResponder(notification: NSNotification){
         self.firstResponder = notification.object
     }
+    
+    
 
 }
 
