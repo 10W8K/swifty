@@ -20,8 +20,6 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         ["MUInputBox":"输入框"],
         ["MUITextFieldWithLabelView":"带标签的输入框"],
         ["MUIFormView":"表单"],
-        ["UILabel":"标签"],
-        ["UIButton":"按钮"],
         ["UIImageView":"图片"],
         ["UISlider":"轮播"],
         ["UIWebView":"webview"],
@@ -47,12 +45,18 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
 
         //rightBarButtonItem apple icon
         var barButtonItemTitleTextAttributes = [
-            NSForegroundColorAttributeName: UIColor(hex:0x999999),
+            NSForegroundColorAttributeName: UIColor(hex:0xcccccc),
             NSFontAttributeName:UIFont(name:"rei",size:24)
         ]
         UIBarButtonItem.appearance().setTitleTextAttributes(barButtonItemTitleTextAttributes, forState: UIControlState.Normal)
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "\U0000F02C", style: .Plain, target: self, action: "showProfile:")
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Bordered, target:nil, action:nil)
+        
+        
+        
+
+        //var tintColor: UIColor!
+        //var barTintColor: UIColor! // default is nil
         //
         
         //
@@ -66,6 +70,7 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         // Do any additional setup after loading the view.
         
         self.title = "Swifty"
+        
         
         self.tableView = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
         self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)

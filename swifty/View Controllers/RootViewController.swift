@@ -21,7 +21,7 @@ class RootViewController: UITabBarController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+        //self.view.backgroundColor = UIColor(hex:0x1A1F21)
         
         self.indexViewController = IndexViewController()
         self.rootNavigationController = UINavigationController(rootViewController:indexViewController!)
@@ -32,11 +32,18 @@ class RootViewController: UITabBarController {
         
         //navigationBar settings
         //self.rootNavigationController!.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.whiteColor(), forKey: NSForegroundColorAttributeName)
-        //self.rootNavigationController!.navigationBar.barTintColor = UIColor(hex:0x1A1F21)
+        self.rootNavigationController!.navigationBar.barTintColor = UIColor(hex:0x1A1F21)
+        self.rootNavigationController!.navigationBar.tintColor = UIColor(hex:0xffffff)
         //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
-        //self.rootNavigationController!.navigationBar.alpha = 1.0
-        //self.rootNavigationController!.navigationBar.translucent = false
+        self.rootNavigationController!.navigationBar.alpha = 1
+        self.rootNavigationController!.navigationBar.translucent = false
         
+
+
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSFontAttributeName : UIFont(name:"Helvetica",size:16),
+            NSForegroundColorAttributeName : UIColor(hex:0xffffff)
+        ]
         
         
         //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
@@ -89,5 +96,6 @@ class RootViewController: UITabBarController {
 //        println("notification handleFirstResponder")
 //        self.firstResponder = notification.object
 //    }
+    
 
 }

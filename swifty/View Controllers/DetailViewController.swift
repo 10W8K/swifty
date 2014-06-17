@@ -32,29 +32,7 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         
         NSLog(self.title)
         
-        //NSLog(self.title);
-        if(self.title == "UILabel"){
-            // Label
-            var label = UILabel(frame: self.view.bounds)
-            label.backgroundColor = UIColor.clearColor()
-            label.textAlignment = NSTextAlignment.Center
-            label.font = UIFont.systemFontOfSize(36)
-            label.text = "Hello, Swift"
-            self.view.addSubview(label)
-            
-        }else if(self.title == "UIButton"){
-            // Button
-            var button = UIButton.buttonWithType(UIButtonType.System) as? UIButton
-            button!.frame = CGRectMake(110.0, 120.0, 100.0, 50.0)
-            button!.backgroundColor = UIColor.grayColor()
-            button?.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
-            button!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
-            button?.setTitle("Touch Me", forState: UIControlState.Normal)
-            button?.setTitle("Touch Me", forState: UIControlState.Highlighted)
-            button?.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-            button!.tag = 100
-            self.view.addSubview(button)
-        }else if(self.title == "UIImageView"){
+        if(self.title == "UIImageView"){
             var image     = UIImage(named: "swift-hero.png")
             var imageView = UIImageView(frame: CGRectMake((CGRectGetWidth(self.view.bounds) - image.size.width) / 2.0, 120.0, image.size.width, image.size.height))
             imageView.image = image
@@ -370,7 +348,16 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
     
     
     func tableView(tableView: MUITableView!, titleForHeaderInSection section: Int) -> String! {
-        return "表单"
+        var title = ""
+        switch(section){
+        case 0:
+            title = "手机"
+            break
+        default:
+            break
+        }
+        return title
+
     }
     
     override func updateViewConstraints() {
