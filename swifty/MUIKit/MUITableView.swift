@@ -29,7 +29,7 @@ class MUITableView: UITableView {
 
         self.scrollEnabled = false
         
-        self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        //self.setTranslatesAutoresizingMaskIntoConstraints(false)
         //constraints
         var constraints = NSLayoutConstraint[]()
         

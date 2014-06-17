@@ -54,11 +54,6 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
             var switchControl = UISwitch(frame:CGRectMake(130.0, 120.0, 100.0, 30.0))
             switchControl.on = true
             self.view.addSubview(switchControl)
-        }else if(self.title == "UITextField"){
-            var textField = UITextField(frame:CGRectMake(60.0, 120.0, 200.0, 30.0))
-            textField.backgroundColor = UIColor.lightGrayColor()
-            textField.placeholder = "input text"
-            self.view.addSubview(textField)
         }else if(self.title == "UIScrollView"){
             var scrollView = UIScrollView(frame:CGRectMake(60.0, 120.0, 200.0, 200.0))
             scrollView.pagingEnabled = true

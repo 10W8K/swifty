@@ -25,7 +25,6 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         ["UIWebView":"webview"],
         ["UISegmentedControl":"分段控制"],
         ["UISwitch":"开关"],
-        ["UITextField":"文字输入"],
         ["UIScrollView":"滚动"],
         ["UISearchBar":"搜索"],
         ["UIPageControl":"分页"],
@@ -79,6 +78,51 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         //self.tableView!.separatorStyle  = UITableViewCellSeparatorStyle.None
         
         self.view?.addSubview(self.tableView)
+        
+        
+        
+//        self.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+//        self.tableView!.setTranslatesAutoresizingMaskIntoConstraints(false)
+//        //constraints
+//        var constraints = NSLayoutConstraint[]()
+//        
+//        constraints += NSLayoutConstraint(item: self.tableView!,
+//            attribute: NSLayoutAttribute.Left,
+//            relatedBy: NSLayoutRelation.Equal,
+//            toItem: self.view,
+//            attribute: NSLayoutAttribute.Left,
+//            multiplier: 1.0,
+//            constant: 0.0)
+//        
+//        constraints += NSLayoutConstraint(item: self.tableView!,
+//            attribute: NSLayoutAttribute.Top,
+//            relatedBy: NSLayoutRelation.Equal,
+//            toItem: self.view,
+//            attribute: NSLayoutAttribute.Top,
+//            multiplier: 1.0,
+//            constant: 0.0)
+//        
+//        constraints += NSLayoutConstraint(item: self.tableView!,
+//            attribute: NSLayoutAttribute.Right,
+//            relatedBy: NSLayoutRelation.Equal,
+//            toItem: self.view,
+//            attribute: NSLayoutAttribute.Right,
+//            multiplier: 1.0,
+//            constant: 0.0)
+//        
+//        constraints += NSLayoutConstraint(item: self.tableView!,
+//            attribute: NSLayoutAttribute.Bottom,
+//            relatedBy: NSLayoutRelation.Equal,
+//            toItem: self.view,
+//            attribute: NSLayoutAttribute.Bottom,
+//            multiplier: 1.0,
+//            constant: 0.0)
+//        
+//        
+//        self.tableView!.addConstraints(constraints)
+        
+        
+        
     }
     
     // UITableViewDataSource Methods
@@ -136,5 +180,9 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
     
     func showProfile(sender: UIBarButtonItem){
         println("showProfile")
+    }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        self.tableView!.frame = self.view.frame
     }
 }

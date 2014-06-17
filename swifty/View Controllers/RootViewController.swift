@@ -36,7 +36,7 @@ class RootViewController: UITabBarController {
         self.rootNavigationController!.navigationBar.tintColor = UIColor(hex:0xffffff)
         //self.rootNavigationController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
         self.rootNavigationController!.navigationBar.alpha = 1
-        self.rootNavigationController!.navigationBar.translucent = false
+        //self.rootNavigationController!.navigationBar.translucent = false
         
 
 
@@ -96,6 +96,7 @@ class RootViewController: UITabBarController {
 //        println("notification handleFirstResponder")
 //        self.firstResponder = notification.object
 //    }
+    
     
 
 }
