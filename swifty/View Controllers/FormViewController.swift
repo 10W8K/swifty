@@ -74,7 +74,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MUITableViewCell!
         
-        //remove the arrow
+        //remote the arrow
         cell.accessoryType = UITableViewCellAccessoryType.None
         
         
@@ -85,7 +85,7 @@ class FormViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         //tableView自适应的高度在MUITableView内使用autolayout做了处理
-        self.tableView!.frame.size.height = self.tableView!.contentSize.height + 64
+        self.tableView!.frame.size.height = self.tableView!.contentSize.height
         
         return cell
         

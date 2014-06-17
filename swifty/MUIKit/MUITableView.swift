@@ -9,10 +9,14 @@
 import UIKit
 
 class MUITableView: UITableView {
+    
+    var firstResponder: AnyObject?
+    var notificationCenter = NSNotificationCenter.defaultCenter()
 
     init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         // Initialization code
+        self.notificationCenter.addObserver(self, selector: "handleFirstResponder:", name: "firstResponder", object: nil)
     }
 
 
@@ -25,7 +29,7 @@ class MUITableView: UITableView {
 
         self.scrollEnabled = false
         
-        //self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.setTranslatesAutoresizingMaskIntoConstraints(false)
         //constraints
         var constraints = NSLayoutConstraint[]()
         
@@ -43,15 +47,7 @@ class MUITableView: UITableView {
             toItem: self.superview,
             attribute: NSLayoutAttribute.Top,
             multiplier: 1.0,
-            constant: 60.0)
-        
-//        constraints += NSLayoutConstraint(item: self,
-//            attribute: NSLayoutAttribute.Bottom,
-//            relatedBy: NSLayoutRelation.Equal,
-//            toItem: self.superview,
-//            attribute: NSLayoutAttribute.Top,
-//            multiplier: 1.0,
-//            constant: self.contentSize.height + (self.window!.rootViewController.interfaceOrientation == UIInterfaceOrientation.Portrait ? 64.0 : 32.0) + 148)
+            constant: 0.0)
         
         constraints += NSLayoutConstraint(item: self,
             attribute: NSLayoutAttribute.Bottom,
@@ -59,7 +55,15 @@ class MUITableView: UITableView {
             toItem: self.superview,
             attribute: NSLayoutAttribute.Top,
             multiplier: 1.0,
-            constant: self.contentSize.height)
+            constant: self.contentSize.height + (self.window!.rootViewController.interfaceOrientation == UIInterfaceOrientation.Portrait ? 64.0 : 32.0) + 48)
+        
+//        constraints += NSLayoutConstraint(item: self,
+//            attribute: NSLayoutAttribute.Bottom,
+//            relatedBy: NSLayoutRelation.Equal,
+//            toItem: self.superview,
+//            attribute: NSLayoutAttribute.Top,
+//            multiplier: 1.0,
+//            constant: self.contentSize.height)
         
         
         constraints += NSLayoutConstraint(item: self,
@@ -87,6 +91,21 @@ class MUITableView: UITableView {
     }
     
     
+    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
+    {
+        println("touchesBegan MUITableView")
+        if(self.firstResponder !== nil){
+            self.firstResponder!.resignFirstResponder()
+            self.firstResponder = nil
+        }
 
+        
+    }
+    
+    func handleFirstResponder(notification: NSNotification){
+        println("MUITableView notification handleFirstResponder")
+        self.firstResponder = notification.object
+        println(self.firstResponder)
+    }
 
 }

@@ -13,6 +13,7 @@
 		FA665C6A19442D0F002F784F /* swiftyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665C6919442D0F002F784F /* swiftyTests.swift */; };
 		FA67A94119499000004D5649 /* MUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA67A94019499000004D5649 /* MUITableViewCell.swift */; };
 		FA68254F194F307B0024719A /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA68254E194F307B0024719A /* FormViewController.swift */; };
+		FA682551194FBCF50024719A /* MUIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA682550194FBCF50024719A /* MUIScrollView.swift */; };
 		FA69B2B9194A93D0008C061F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA69B2B7194A93D0008C061F /* DetailViewController.swift */; };
 		FA722D3B194EF231002E2C22 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA722D3A194EF231002E2C22 /* RootViewController.swift */; };
 		FA7E7AC31945FA1F00438E91 /* SwiftMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7E7AC21945FA1F00438E91 /* SwiftMath.swift */; };
@@ -50,6 +51,7 @@
 		FA665C6919442D0F002F784F /* swiftyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftyTests.swift; sourceTree = "<group>"; };
 		FA67A94019499000004D5649 /* MUITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUITableViewCell.swift; path = MUIKit/MUITableViewCell.swift; sourceTree = "<group>"; };
 		FA68254E194F307B0024719A /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FormViewController.swift; path = "View Controllers/FormViewController.swift"; sourceTree = "<group>"; };
+		FA682550194FBCF50024719A /* MUIScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MUIScrollView.swift; path = MUIKit/MUIScrollView.swift; sourceTree = "<group>"; };
 		FA69B2B3194A9314008C061F /* MathSum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MathSum.m; path = "Custom Classes/MathSum.m"; sourceTree = "<group>"; };
 		FA69B2B4194A9314008C061F /* MathSum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MathSum.h; path = "Custom Classes/MathSum.h"; sourceTree = "<group>"; };
 		FA69B2B7194A93D0008C061F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				FAD543761949CA1C004432F8 /* MUILabel.swift */,
 				FAD543781949CB91004432F8 /* MUITextFieldWithLabelView.swift */,
 				FABBBC16194ACB5700208BCF /* MUITableView.swift */,
+				FA682550194FBCF50024719A /* MUIScrollView.swift */,
 			);
 			name = MUIKit;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA682551194FBCF50024719A /* MUIScrollView.swift in Sources */,
 				FA69B2B9194A93D0008C061F /* DetailViewController.swift in Sources */,
 				FAD543771949CA1C004432F8 /* MUILabel.swift in Sources */,
 				FAEA0C0319499AD000B9438E /* MUIView.swift in Sources */,
