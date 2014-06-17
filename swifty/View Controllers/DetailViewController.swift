@@ -169,8 +169,8 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
         }else if(self.title == "MUIFormView"){
             //println("MUIFormView")
             //如果使用UITableView做Form,最好设置style:UITableViewStyle.Grouped
-            self.tableView = MUITableView(frame:self.view.frame, style:UITableViewStyle.Grouped)
-            //self.tableView = MUITableView(frame:CGRect(x:0.0,y:120.0,width:320.0,height:80.0), style:UITableViewStyle.Grouped)
+            //self.tableView = MUITableView(frame:self.view.frame, style:UITableViewStyle.Grouped)
+            self.tableView = MUITableView(frame:CGRect(x:0.0,y:40.0,width:320.0,height:80.0), style:UITableViewStyle.Grouped)
             self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
             self.tableView!.delegate = self
             self.tableView!.dataSource = self
@@ -356,11 +356,15 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
     }
     
     override func updateViewConstraints() {
+        println("DetailViewController === > updateViewConstraints")
         super.updateViewConstraints()
         //println("updateViewConstraints")
     }
 
-
-
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        //println("====>")
+        //println(self.navigationController.navigationBar.frame.size.height)
+        //self.tableView!.frame = CGRect(x:0.0,y:self.navigationController.navigationBar.frame.size.height,width:self.view.frame.size.width,height:self.view.frame.size.height)
+    }
     
 }

@@ -97,6 +97,11 @@ class RootViewController: UITabBarController {
 //        self.firstResponder = notification.object
 //    }
     
-    
+    override func updateViewConstraints() {
+        println("RootViewController === > updateViewConstraints")
+        super.updateViewConstraints()
+        //println("updateViewConstraints")
+    }
+
 
 }

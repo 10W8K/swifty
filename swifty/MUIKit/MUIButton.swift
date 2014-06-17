@@ -99,7 +99,7 @@ class MUIButton: UIButton {
             multiplier: 1.0,
             constant: -100.0)
         
-        
+        self.superview.removeConstraints(self.superview.constraints())
         self.superview.addConstraints(constraints)
         
     }

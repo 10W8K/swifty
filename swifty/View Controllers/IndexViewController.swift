@@ -81,7 +81,7 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         
         
         
-//        self.view.setTranslatesAutoresizingMaskIntoConstraints(false)
+
 //        self.tableView!.setTranslatesAutoresizingMaskIntoConstraints(false)
 //        //constraints
 //        var constraints = NSLayoutConstraint[]()
@@ -118,8 +118,8 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
 //            multiplier: 1.0,
 //            constant: 0.0)
 //        
-//        
-//        self.tableView!.addConstraints(constraints)
+//        self.view.removeConstraints(self.view.constraints())
+//        self.view.addConstraints(constraints)
         
         
         
@@ -159,6 +159,7 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
         
         
+        
         for itemkey in self.itemArray[indexPath.row].keys {
             if(itemkey == "MUInputBox") {
                 //                var textfieldTableView = textfieldTableViewController(nibName:nil,bundle:nil)
@@ -184,5 +185,11 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
         self.tableView!.frame = self.view.frame
+    }
+    
+    override func updateViewConstraints() {
+        println("updateViewConstraints")
+        super.updateViewConstraints()
+        //println("updateViewConstraints")
     }
 }

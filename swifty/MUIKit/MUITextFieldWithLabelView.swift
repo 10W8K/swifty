@@ -112,7 +112,7 @@ class MUITextFieldWithLabelView: UIView {
             constant: 70.0)
         
     
-        
+        self.removeConstraints(self.constraints())
         self.addConstraints(constraints)
         
     }
