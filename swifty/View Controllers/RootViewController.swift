@@ -8,20 +8,30 @@
 
 import UIKit
 
-class RootViewController: UITabBarController {
+struct Static {
+    static var token: dispatch_once_t = 0
+}
+
+class RootViewController: UITabBarController, UITabBarControllerDelegate {
+    
 
     var rootNavigationController: UINavigationController? ,
         //firstResponder: AnyObject?,
         indexViewController: IndexViewController? ,
-        formViewController: FormViewController?
+        formViewController: FormViewController? ,
+        welcomeViewController: WelComeViewController?
     
     //var notificationCenter = NSNotificationCenter.defaultCenter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.delegate = self
+        
         // Do any additional setup after loading the view.
         //self.view.backgroundColor = UIColor(hex:0x1A1F21)
+        self.welcomeViewController = WelComeViewController()
+
         
         self.indexViewController = IndexViewController()
         self.rootNavigationController = UINavigationController(rootViewController:indexViewController!)
@@ -55,10 +65,12 @@ class RootViewController: UITabBarController {
         self.formViewController!.tabBarItem.title = "足球"
         self.formViewController!.tabBarItem = UITabBarItem(title: "足球", image:UIImage(named:"Football.png"), selectedImage:nil)
         
+        
         self.setViewControllers([self.rootNavigationController!,self.formViewController!],animated:true)
         //self.viewControllers = [self.rootNavigationController!]
-        
-        
+        //self.selectedViewController = self.formViewController!
+        self.selectedIndex = 0
+        //self.navigationController.pushViewController(self.indexViewController!, animated:true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,27 +93,17 @@ class RootViewController: UITabBarController {
         //self.notificationCenter.addObserver(self, selector: "handleFirstResponder:", name: "firstResponder", object: nil)
     }
     
-//    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
-//    {
-//        println(".....");
-//        /**
-//        if(self.firstResponder !== nil){
-//            self.firstResponder!.resignFirstResponder()
-//            self.firstResponder = nil
-//        }*/
-//        
-//    }
-//    
-//    func handleFirstResponder(notification: NSNotification){
-//        println("notification handleFirstResponder")
-//        self.firstResponder = notification.object
-//    }
-    
     override func updateViewConstraints() {
         println("RootViewController === > updateViewConstraints")
         super.updateViewConstraints()
         //println("updateViewConstraints")
     }
+    
+    func tabBarController(tabBarController: UITabBarController!, shouldSelectViewController viewController: UIViewController!) -> Bool{
+        return true
+    }
+    
+    func tabBarController(tabBarController: UITabBarController!, didSelectViewController viewController: UIViewController!){
 
-
+    }
 }

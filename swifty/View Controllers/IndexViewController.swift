@@ -80,6 +80,7 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         self.view?.addSubview(self.tableView)
         
         
+    
         
 
 //        self.tableView!.setTranslatesAutoresizingMaskIntoConstraints(false)
@@ -120,7 +121,6 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
 //        
 //        self.view.removeConstraints(self.view.constraints())
 //        self.view.addConstraints(constraints)
-        
         
         
     }

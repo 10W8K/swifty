@@ -1,24 +1,25 @@
 //
-//  FormViewController.swift
+//  WelComeViewController.swift
 //  swifty
 //
-//  Created by 想当当 on 14-6-16.
+//  Created by 想当当 on 14-6-17.
 //  Copyright (c) 2014年 想当当. All rights reserved.
 //
 
 import UIKit
 
-class FormViewController: UIViewController {
+class WelComeViewController: UIViewController {
 
-
-
+    
+    var indexViewController:IndexViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        
-        
+        //self.parentViewController!.parentViewController!.selectedIndex = 1
+        //println("123")
+        //self.parentViewController.selectedIndex = 1
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +37,5 @@ class FormViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 
 }

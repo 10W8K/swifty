@@ -70,10 +70,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         println("applicationWillTerminate")
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+
 
     override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!)
     {
-        println("....")
         if(self.firstResponder !== nil){
             self.firstResponder!.resignFirstResponder()
             self.firstResponder = nil
@@ -88,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
+
 
 }
 
