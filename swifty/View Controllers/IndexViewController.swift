@@ -44,6 +44,18 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        //rightBarButtonItem apple icon
+        var barButtonItemTitleTextAttributes = [
+            NSForegroundColorAttributeName: UIColor(hex:0x999999),
+            NSFontAttributeName:UIFont(name:"rei",size:24)
+        ]
+        UIBarButtonItem.appearance().setTitleTextAttributes(barButtonItemTitleTextAttributes, forState: UIControlState.Normal)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "\U0000F02C", style: .Plain, target: self, action: "showProfile:")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Bordered, target:nil, action:nil)
+        //
+        
+        //
         
         let screenWidth = self.view.frame.size.width
         let screenHeight = self.view.frame.size.height
@@ -115,5 +127,9 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         
         //detailViewController.title = self.items?.objectAtIndex(indexPath.row)  as String
         //        self.navigationController.pushViewController(detailViewController, animated:true)
+    }
+    
+    func showProfile(sender: UIBarButtonItem){
+        println("showProfile")
     }
 }

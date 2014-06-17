@@ -14,8 +14,8 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
     var tableView: MUITableView?
     var cellIndentifier = "cellIndentifier"
     var itemArray = [
-        ["手机"],
-        ["手机号码"]
+        ["title":"手机AAA","section":"0"],
+        ["title":"手机BBB","section":"1"]
     ]
 
     
@@ -309,37 +309,68 @@ class DetailViewController: BaseMUIViewController, UIPickerViewDataSource, UIPic
     
     // UITableViewDataSource Methods
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        return 1
+        return 2
     }
     
+
+    
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return self.itemArray.count
+        var count = 0
+        switch(section){
+            case 0:
+                count = self.itemArray.count
+                break
+            default:
+                count = 0
+                break
+        }
+        return count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        
+        
         
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MUITableViewCell!
         
         //remove the arrow
         cell.accessoryType = UITableViewCellAccessoryType.None
         
-        
-        for(item) in self.itemArray[indexPath.row] {
-            var contentView = MUITextFieldWithLabelView(frame:cell.contentView.frame)
-            contentView.label.text = item
-            cell.contentView.insertSubview(contentView, atIndex:0)
+        switch(indexPath.section){
+            case 0:
+                for (item) in self.itemArray[indexPath.row] {
+                    //if(indexPath.section == self.itemArray[indexPath.row]["section"]!){
+                    var contentView = MUITextFieldWithLabelView(frame:cell.contentView.frame)
+                    contentView.label.text = self.itemArray[indexPath.row]["title"]
+                    cell.contentView.insertSubview(contentView, atIndex:0)
+                    //}
+            
+                }
+                //tableView自适应的高度在MUITableView内使用autolayout做了处理
+                self.tableView!.frame.size.height = self.tableView!.contentSize.height + 64
+                break
+            
+            case 1:
+
+                break
+            
+            default:
+                break
         }
-        
-        //tableView自适应的高度在MUITableView内使用autolayout做了处理
-        //self.tableView!.frame.size.height = self.tableView!.contentSize.height + 64
-        
+
+
         return cell
-        
+
         
     }
     
-    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+    func tableView(tableView: MUITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
         return 40.0
+    }
+    
+    
+    func tableView(tableView: MUITableView!, titleForHeaderInSection section: Int) -> String! {
+        return "表单"
     }
     
     override func updateViewConstraints() {
