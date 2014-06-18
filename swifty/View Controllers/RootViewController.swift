@@ -72,6 +72,21 @@ class RootViewController: UITabBarController, UITabBarControllerDelegate {
         self.selectedIndex = 0
         //self.navigationController.pushViewController(self.indexViewController!, animated:true)
     }
+    
+    //自定义了TabBarController 之后必须实现以下
+    //thanks to http://www.cocoachina.com/bbs/read.php?tid=127618 @goodnighthsu
+    override func viewWillAppear(animated: Bool) {
+        self.selectedViewController.beginAppearanceTransition(true,animated:animated)
+    }
+    override func viewDidAppear(animated: Bool) {
+        self.selectedViewController.endAppearanceTransition()
+    }
+    override func viewWillDisappear(animated: Bool) {
+        self.selectedViewController.beginAppearanceTransition(false,animated:animated)
+    }
+    override func viewDidDisappear(animated: Bool) {
+        self.selectedViewController.endAppearanceTransition()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,9 +104,7 @@ class RootViewController: UITabBarController, UITabBarControllerDelegate {
     }
     */
     
-    override func viewWillAppear(animated: Bool) {
-        //self.notificationCenter.addObserver(self, selector: "handleFirstResponder:", name: "firstResponder", object: nil)
-    }
+
     
     override func updateViewConstraints() {
         println("RootViewController === > updateViewConstraints")

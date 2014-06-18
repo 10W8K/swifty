@@ -125,6 +125,11 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         
     }
     
+    override func viewWillAppear(animated: Bool) {}
+    override func viewDidAppear(animated: Bool) {}
+    override func viewWillDisappear(animated: Bool) {}
+    override func viewDidDisappear(animated: Bool) {}
+    
     // UITableViewDataSource Methods
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
         return 1
