@@ -16,9 +16,9 @@ class RootViewController: UITabBarController, UITabBarControllerDelegate {
     
 
     var rootNavigationController: UINavigationController? ,
-        //firstResponder: AnyObject?,
+        rootListViewController: UINavigationController? ,
         indexViewController: IndexViewController? ,
-        formViewController: FormViewController? ,
+        listViewController: ListViewController? ,
         welcomeViewController: WelComeViewController?
     
     //var notificationCenter = NSNotificationCenter.defaultCenter()
@@ -61,16 +61,24 @@ class RootViewController: UITabBarController, UITabBarControllerDelegate {
         
         //self.delegate = self
         
-        self.formViewController = FormViewController()
-        self.formViewController!.tabBarItem.title = "足球"
-        self.formViewController!.tabBarItem = UITabBarItem(title: "足球", image:UIImage(named:"Football.png"), selectedImage:nil)
+        self.listViewController = ListViewController()
+        self.listViewController!.tabBarItem.title = "世界杯"
+        self.listViewController!.tabBarItem = UITabBarItem(title: "世界杯", image:UIImage(named:"Football.png"), selectedImage:nil)
         
+        self.rootListViewController = UINavigationController(rootViewController:self.listViewController!)
         
-        self.setViewControllers([self.rootNavigationController!,self.formViewController!],animated:true)
-        //self.viewControllers = [self.rootNavigationController!]
-        //self.selectedViewController = self.formViewController!
+        //navigationBar settings
+        //self.rootNavigationController!.navigationBar.titleTextAttributes = NSDictionary(object: UIColor.whiteColor(), forKey: NSForegroundColorAttributeName)
+        self.rootListViewController!.navigationBar.barTintColor = UIColor(hex:0x1A1F21)
+        self.rootListViewController!.navigationBar.tintColor = UIColor(hex:0xffffff)
+        //rootListViewController!.navigationBar.backgroundColor = UIColor(hex:0x1A1F21)
+        self.rootListViewController!.navigationBar.alpha = 1
+        //rootListViewController!.navigationBar.translucent = false
+
+        
+        self.setViewControllers([self.rootNavigationController!,self.rootListViewController!],animated:true)
+
         self.selectedIndex = 0
-        //self.navigationController.pushViewController(self.indexViewController!, animated:true)
     }
     
     //自定义了TabBarController 之后必须实现以下
