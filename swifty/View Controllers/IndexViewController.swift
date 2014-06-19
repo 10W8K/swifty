@@ -76,6 +76,7 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         //self.tableView!.separatorStyle  = UITableViewCellSeparatorStyle.None
+        self.tableView!.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleWidth
         
         self.view?.addSubview(self.tableView)
         
@@ -189,7 +190,7 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
     }
     
     override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
-        self.tableView!.frame = self.view.frame
+        //self.tableView!.frame = self.view.frame
     }
     
     override func updateViewConstraints() {

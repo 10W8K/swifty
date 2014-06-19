@@ -27,6 +27,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
+        self.tableView!.separatorInset = UIEdgeInsetsZero
+        self.tableView!.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleWidth
+        
         
         self.view.addSubview(self.tableView!)
         
@@ -52,10 +55,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 println(self.tableView!)
                 
                 
-                });
-            
-            
             });
+            
+        });
         
         
     }
@@ -90,9 +92,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 1
     }
     
-    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
-        return 56.0
-    }
+
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return self.posts!.count
     }
@@ -101,12 +101,38 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        cell.textLabel.text = self.posts![indexPath.row]!["title"] as NSString
+        cell.accessoryType = UITableViewCellAccessoryType.None
+        cell.selectionStyle = UITableViewCellSelectionStyle.Default
+        
+        
+        //cell.setHighlighted(false,animated:false)
+        //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
+        //cell.textLabel.text = self.posts![indexPath.row]!["title"] as NSString
+        //println(self.posts![indexPath.row]!)
+        
+        var listCellView = MUIListCellView(frame:cell.contentView.frame)
+        
+        listCellView.titleLabel!.text = self.posts![indexPath.row]!["title"] as NSString
+        
+        cell.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
+        cell.contentView.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
+        cell.contentView.backgroundColor = UIColor(hex:0xff9900)
+        cell.contentView.insertSubview(listCellView, atIndex:0)
+        
+        //cell.detailTextLabel.text = itemkey
         return cell
     }
     
-    
+    // UITableViewDelegate Methods
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
+        
+        println(cell.frame)
+    }
+
     
     
     
