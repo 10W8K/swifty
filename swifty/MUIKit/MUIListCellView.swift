@@ -21,20 +21,16 @@ class MUIListCellView: UIView {
                 
         self.title!.textColor = UIColor(hex:0x666666)
         
-        self.title!.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.title!.lineBreakMode = NSLineBreakMode.ByTruncatingTail
         
-        self.title!.numberOfLines = 0;
+        self.title!.numberOfLines = 2;
         
-        self.addSubview(self.title!)
+        self.insertSubview(self.title!, atIndex:1)
+    
+        self.sizeToFit()
         
-        //self.layer.borderWidth = 2.0
+        self.layer.borderWidth = 2.0
         
-        //self.layer.borderColor = UIColor(hex:0x000000).CGColor
-
-        //println(self.frame)
-        //self.sizeToFit()
-        //self.autoresizingMask = UIViewAutoresizing.FlexibleHeight
-        self.needsUpdateConstraints()
         self.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
     }
 
@@ -43,6 +39,7 @@ class MUIListCellView: UIView {
     // An empty implementation adversely affects performance during animation.
     override func drawRect(rect: CGRect)
     {
+        //println(self.frame)
         // Drawing code
         
         self.title!.setTranslatesAutoresizingMaskIntoConstraints(false)

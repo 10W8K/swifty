@@ -30,6 +30,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView!.separatorInset = UIEdgeInsetsZero
         self.tableView!.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleWidth
         
+        self.tableView!.rowHeight = UITableViewAutomaticDimension;
+        self.tableView!.estimatedRowHeight = 88.0; // set to whatever your "average" cell height is
+        
         
         self.view.addSubview(self.tableView!)
         
@@ -99,33 +102,19 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        
-
-        
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellIndentifier + "_" + String(indexPath.row))
         cell.accessoryType = UITableViewCellAccessoryType.None
         cell.selectionStyle = UITableViewCellSelectionStyle.Default
-        
-        //cell.needsUpdateConstraints()
-        //cell.layer.borderWidth = 2.0
-        
-        //cell.layer.borderColor = UIColor(hex:0xff0000).CGColor
-        
-        //cell.setHighlighted(false,animated:false)
-        //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        
-        //cell.textLabel.text = self.posts![indexPath.row]!["title"] as NSString
-        //println(self.posts![indexPath.row]!)
-        
+        //cell.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+        //cell.contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         var listCellView = MUIListCellView(frame:cell.contentView.frame)
         listCellView.title!.text = self.posts![indexPath.row]!["title"] as NSString
-        
-        cell.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
-        cell.contentView.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
-        //cell.contentView.backgroundColor = UIColor(hex:0xff9900)
         cell.contentView.insertSubview(listCellView, atIndex:0)
         
-        //cell.detailTextLabel.text = itemkey
+        //cell.contentView.sizeToFit()
+        //cell.sizeToFit()
+        println(cell.contentView.frame)
+        
         return cell
     }
     
@@ -133,12 +122,18 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
         
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
-        
-        println(cell.frame)
+        //var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
+        //cell.highlighted = false
+        //println(cell.frame)
     }
 
-    
-    
-    
+    func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellIndentifier + "_" + String(indexPath.row))
+        
+        return 44.0
+    }
+    func tableView(tableView: UITableView!, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
+        
+        return 44.0
+    }
 }
