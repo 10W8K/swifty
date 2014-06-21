@@ -48,8 +48,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
                 
                 println("当前共有记录:[ \(self.posts!.count) ]条")
                 
-                self.tableView!.delegate = self
-                self.tableView!.dataSource = self
+                //self.tableView!.delegate = self
+                //self.tableView!.dataSource = self
                 
                 self.tableView!.reloadData()
                 println(self.tableView!)
@@ -100,10 +100,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         
+
+        
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
         cell.accessoryType = UITableViewCellAccessoryType.None
         cell.selectionStyle = UITableViewCellSelectionStyle.Default
         
+        //cell.needsUpdateConstraints()
+        //cell.layer.borderWidth = 2.0
+        
+        //cell.layer.borderColor = UIColor(hex:0xff0000).CGColor
         
         //cell.setHighlighted(false,animated:false)
         //cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
@@ -112,12 +118,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         //println(self.posts![indexPath.row]!)
         
         var listCellView = MUIListCellView(frame:cell.contentView.frame)
-        
-        listCellView.titleLabel!.text = self.posts![indexPath.row]!["title"] as NSString
+        listCellView.title!.text = self.posts![indexPath.row]!["title"] as NSString
         
         cell.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
         cell.contentView.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
-        cell.contentView.backgroundColor = UIColor(hex:0xff9900)
+        //cell.contentView.backgroundColor = UIColor(hex:0xff9900)
         cell.contentView.insertSubview(listCellView, atIndex:0)
         
         //cell.detailTextLabel.text = itemkey

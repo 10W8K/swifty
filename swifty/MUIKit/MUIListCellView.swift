@@ -10,27 +10,31 @@ import UIKit
 
 class MUIListCellView: UIView {
     
-    var titleLabel:UILabel?
+    var title:UILabel?
     
     init(frame: CGRect) {
         super.init(frame: frame)
         // Initialization code
         self.backgroundColor = UIColor(hex:0xffffff)
         
-        self.titleLabel = UILabel()
+        self.title = UILabel()
                 
-        self.titleLabel!.textColor = UIColor(hex:0x666666)
+        self.title!.textColor = UIColor(hex:0x666666)
         
-        self.titleLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.title!.lineBreakMode = NSLineBreakMode.ByWordWrapping
         
-        self.titleLabel!.numberOfLines = 0;
+        self.title!.numberOfLines = 0;
         
-        self.addSubview(self.titleLabel!)
+        self.addSubview(self.title!)
         
+        //self.layer.borderWidth = 2.0
+        
+        //self.layer.borderColor = UIColor(hex:0x000000).CGColor
+
         //println(self.frame)
         //self.sizeToFit()
         //self.autoresizingMask = UIViewAutoresizing.FlexibleHeight
-        
+        self.needsUpdateConstraints()
         self.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
     }
 
@@ -41,11 +45,11 @@ class MUIListCellView: UIView {
     {
         // Drawing code
         
-        self.titleLabel!.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.title!.setTranslatesAutoresizingMaskIntoConstraints(false)
         //constraints
         var constraints = NSLayoutConstraint[]()
         
-        constraints += NSLayoutConstraint(item: self.titleLabel!,
+        constraints += NSLayoutConstraint(item: self.title!,
             attribute: NSLayoutAttribute.Left,
             relatedBy: NSLayoutRelation.Equal,
             toItem: self,
@@ -53,7 +57,7 @@ class MUIListCellView: UIView {
             multiplier: 1.0,
             constant: 10.0)
         
-        constraints += NSLayoutConstraint(item: self.titleLabel!,
+        constraints += NSLayoutConstraint(item: self.title!,
             attribute: NSLayoutAttribute.Top,
             relatedBy: NSLayoutRelation.Equal,
             toItem: self,
@@ -61,7 +65,7 @@ class MUIListCellView: UIView {
             multiplier: 1.0,
             constant: 5.0)
         
-        constraints += NSLayoutConstraint(item: self.titleLabel!,
+        constraints += NSLayoutConstraint(item: self.title!,
             attribute: NSLayoutAttribute.Right,
             relatedBy: NSLayoutRelation.Equal,
             toItem: self,
@@ -69,7 +73,7 @@ class MUIListCellView: UIView {
             multiplier: 1.0,
             constant: -10.0)
         
-        constraints += NSLayoutConstraint(item: self.titleLabel!,
+        constraints += NSLayoutConstraint(item: self.title!,
             attribute: NSLayoutAttribute.Bottom,
             relatedBy: NSLayoutRelation.Equal,
             toItem: self,
