@@ -18,6 +18,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //var jsonDataStr = "{}"
+        //var data: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonDataStr, options: nil, error: nil) as NSDictionary
+        
+
+        
         
         self.title = "世界杯"
         
@@ -30,8 +35,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView!.separatorInset = UIEdgeInsetsZero
         self.tableView!.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleWidth
         
-        self.tableView!.rowHeight = UITableViewAutomaticDimension;
-        self.tableView!.estimatedRowHeight = 88.0; // set to whatever your "average" cell height is
+        //self.tableView!.rowHeight = UITableViewAutomaticDimension;
+        //self.tableView!.estimatedRowHeight = 88.0; // set to whatever your "average" cell height is
         
         
         self.view.addSubview(self.tableView!)
@@ -62,6 +67,19 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         });
         
+        
+        
+        let r = HttpRequest(url: "https://itunes.apple.com/lookup?id=909253")
+        r.GET({(error: NSError?, headers: NSDictionary?, data: NSData?) -> () in
+            if (error) {
+                println("Error: \(error!.localizedDescription)")
+            } else {
+                var json = JSONValue(data!)
+                
+                //var results:NSMutableArray = json["results"] as NSMutableArray
+                //println(results)
+            }
+        })
         
     }
     
@@ -108,12 +126,14 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         //cell.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         //cell.contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         var listCellView = MUIListCellView(frame:cell.contentView.frame)
-        listCellView.title!.text = self.posts![indexPath.row]!["title"] as NSString
+        listCellView.title.text = self.posts![indexPath.row]!["title"] as NSString
+        //println("....")
+        //println(listCellView.frame)
         cell.contentView.insertSubview(listCellView, atIndex:0)
         
         //cell.contentView.sizeToFit()
         //cell.sizeToFit()
-        println(cell.contentView.frame)
+        
         
         return cell
     }
@@ -129,11 +149,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellIndentifier + "_" + String(indexPath.row))
-        
-        return 44.0
+        //println(cell.contentView.frame)
+        return 128.0
     }
     func tableView(tableView: UITableView!, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
-        
+        var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellIndentifier + "_" + String(indexPath.row))
+        println(cell.contentView.frame)
         return 44.0
     }
 }
