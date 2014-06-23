@@ -18,11 +18,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //var jsonDataStr = "{}"
-        //var data: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonDataStr, options: nil, error: nil) as NSDictionary
-        
-
-        
         
         self.title = "世界杯"
         
@@ -33,6 +28,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         self.tableView!.separatorInset = UIEdgeInsetsZero
+        self.tableView!.separatorColor = UIColor(hex:0x661A2B)
         self.tableView!.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleWidth
         
         //self.tableView!.rowHeight = UITableViewAutomaticDimension;
@@ -150,7 +146,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellIndentifier + "_" + String(indexPath.row))
         //println(cell.contentView.frame)
-        return 128.0
+        return 140.0
     }
     func tableView(tableView: UITableView!, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellIndentifier + "_" + String(indexPath.row))
