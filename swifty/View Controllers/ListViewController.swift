@@ -21,6 +21,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.title = "世界杯"
         
+        
         self.posts = NSMutableArray()
         
         self.tableView = UITableView(frame:self.view.frame, style:UITableViewStyle.Plain)
@@ -30,6 +31,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView!.separatorInset = UIEdgeInsetsZero
         self.tableView!.separatorColor = UIColor(hex:0x661A2B)
         self.tableView!.autoresizingMask = UIViewAutoresizing.FlexibleHeight|UIViewAutoresizing.FlexibleWidth
+        
+        var backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor(hex:0xE2E4F4)
+        backgroundView.frame = self.view.frame
+        self.tableView!.backgroundView = backgroundView
+        
         
         //self.tableView!.rowHeight = UITableViewAutomaticDimension;
         //self.tableView!.estimatedRowHeight = 88.0; // set to whatever your "average" cell height is

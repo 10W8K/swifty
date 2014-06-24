@@ -30,18 +30,35 @@ class MUIListCellView: UIView {
         //view.backgroundColor = UIColor(hex:0x661A2B)
         view.autoresizingMask = (UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight)
         
-        var image     = UIImage(named: "1.jpg")
-        var imageView = UIImageView()
-        imageView.image = image
-        imageView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        view.insertSubview(imageView,atIndex:0)
+        var image1     = UIImage(named: "1.jpg")
+        var imageView1 = UIImageView()
+        imageView1.image = image1
+        imageView1.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.insertSubview(imageView1,atIndex:0)
+        
+        
+        var image2     = UIImage(named: "2.jpg")
+        var imageView2 = UIImageView()
+        imageView2.image = image2
+        imageView2.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.insertSubview(imageView2,atIndex:0)
+        
+        var image3     = UIImage(named: "3.jpg")
+        var imageView3 = UIImageView()
+        imageView3.image = image3
+        imageView3.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.insertSubview(imageView3,atIndex:0)
         
         let views = [
-            "imageView": imageView
+            "imageView1": imageView1,
+            "imageView2": imageView2,
+            "imageView3": imageView3
         ]
         
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[imageView]|", options: nil, metrics: nil, views: views))
-        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[imageView(96)]-(>=2)-|", options: nil, metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[imageView1]|", options: nil, metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[imageView2]|", options: nil, metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[imageView3]|", options: nil, metrics: nil, views: views))
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[imageView1(96)]-(5)-[imageView2(96)]-(5)-[imageView3(96)]-(>=2)-|", options: nil, metrics: nil, views: views))
         
         return view
     }()
