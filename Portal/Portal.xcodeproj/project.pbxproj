@@ -40,6 +40,7 @@
 		FA064AA1195ACEAF0009F404 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA064A9B195ACEAF0009F404 /* RootViewController.swift */; };
 		FA064AA2195ACEAF0009F404 /* textfieldTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA064A9C195ACEAF0009F404 /* textfieldTableViewController.swift */; };
 		FA064AA3195ACEAF0009F404 /* WelComeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA064A9D195ACEAF0009F404 /* WelComeViewController.swift */; };
+		FAC05BFE195B095700A1F741 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FAC05BFD195B095700A1F741 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		FA064A9B195ACEAF0009F404 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		FA064A9C195ACEAF0009F404 /* textfieldTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = textfieldTableViewController.swift; sourceTree = "<group>"; };
 		FA064A9D195ACEAF0009F404 /* WelComeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelComeViewController.swift; sourceTree = "<group>"; };
+		FAC05BFD195B095700A1F741 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		FA064A32195AC9930009F404 = {
 			isa = PBXGroup;
 			children = (
+				FAC05BFD195B095700A1F741 /* README.md */,
 				FA064A3D195AC9930009F404 /* Portal */,
 				FA064A4E195AC9930009F404 /* PortalTests */,
 				FA064A3C195AC9930009F404 /* Products */,
@@ -437,6 +440,7 @@
 				FA064A80195AC9EA0009F404 /* MUIScrollView.swift in Sources */,
 				FA064A85195AC9EA0009F404 /* MUIView.swift in Sources */,
 				FA064A44195AC9930009F404 /* Portal.xcdatamodeld in Sources */,
+				FAC05BFE195B095700A1F741 /* README.md in Sources */,
 				FA064AA3195ACEAF0009F404 /* WelComeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
