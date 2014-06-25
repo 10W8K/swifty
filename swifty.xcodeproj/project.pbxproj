@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16AC3237BB37408291EF88D8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3953AD6AF0064D049174B67B /* libPods.a */; };
 		FA531BB21950847200AD4462 /* WelComeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA531BB11950847200AD4462 /* WelComeViewController.swift */; };
 		FA665C5C19442D0F002F784F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA665C5B19442D0F002F784F /* AppDelegate.swift */; };
 		FA665C5E19442D0F002F784F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA665C5D19442D0F002F784F /* Images.xcassets */; };
@@ -42,6 +43,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FA56A363195A665500B1FDFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA56A35E195A665500B1FDFC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4BD4AE5E33B64C0DA562237F;
+			remoteInfo = Pods;
+		};
+		FA56A365195A665500B1FDFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA56A35E195A665500B1FDFC /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 94421C1A8C53449699474FA8;
+			remoteInfo = "Pods-SBJson";
+		};
 		FA665C6419442D0F002F784F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA665C4E19442D0F002F784F /* Project object */;
@@ -66,7 +81,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0412D19B1C924B4D90FA91BA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		3953AD6AF0064D049174B67B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA531BB11950847200AD4462 /* WelComeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelComeViewController.swift; path = "View Controllers/WelComeViewController.swift"; sourceTree = "<group>"; };
+		FA56A35E195A665500B1FDFC /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		FA665C5619442D0F002F784F /* swifty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swifty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA665C5A19442D0F002F784F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA665C5B19442D0F002F784F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16AC3237BB37408291EF88D8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,12 +145,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5756D3F022464EC8BFED6384 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3953AD6AF0064D049174B67B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA56A35F195A665500B1FDFC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA56A364195A665500B1FDFC /* libPods.a */,
+				FA56A366195A665500B1FDFC /* libPods-SBJson.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FA665C4D19442D0F002F784F = {
 			isa = PBXGroup;
 			children = (
+				FA56A35E195A665500B1FDFC /* Pods.xcodeproj */,
 				FA665C5819442D0F002F784F /* swifty */,
 				FA665C6619442D0F002F784F /* swiftyTests */,
 				FA665C5719442D0F002F784F /* Products */,
+				0412D19B1C924B4D90FA91BA /* Pods.xcconfig */,
+				5756D3F022464EC8BFED6384 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -291,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA665C6D19442D0F002F784F /* Build configuration list for PBXNativeTarget "swifty" */;
 			buildPhases = (
+				38C6F27811A2420AACD1F568 /* Check Pods Manifest.lock */,
 				FA665C5219442D0F002F784F /* Sources */,
 				FA665C5319442D0F002F784F /* Frameworks */,
 				FA665C5419442D0F002F784F /* Resources */,
+				D2A9CE6B4E76494C9DD3291E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -352,6 +393,12 @@
 			mainGroup = FA665C4D19442D0F002F784F;
 			productRefGroup = FA665C5719442D0F002F784F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FA56A35F195A665500B1FDFC /* Products */;
+					ProjectRef = FA56A35E195A665500B1FDFC /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FA665C5519442D0F002F784F /* swifty */,
@@ -359,6 +406,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FA56A364195A665500B1FDFC /* libPods.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libPods.a;
+			remoteRef = FA56A363195A665500B1FDFC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FA56A366195A665500B1FDFC /* libPods-SBJson.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libPods-SBJson.a";
+			remoteRef = FA56A365195A665500B1FDFC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FA665C5419442D0F002F784F /* Resources */ = {
@@ -386,6 +450,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38C6F27811A2420AACD1F568 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A9CE6B4E76494C9DD3291E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA665C5219442D0F002F784F /* Sources */ = {
@@ -524,6 +621,7 @@
 		};
 		FA665C6E19442D0F002F784F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0412D19B1C924B4D90FA91BA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -538,6 +636,7 @@
 		};
 		FA665C6F19442D0F002F784F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0412D19B1C924B4D90FA91BA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

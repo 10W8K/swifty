@@ -70,6 +70,9 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         });
         
+
+        
+        //var jsonParser = SBJson4Parser()
         
         
         let r = HttpRequest(url: "https://itunes.apple.com/lookup?id=909253")
@@ -77,8 +80,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             if (error) {
                 println("Error: \(error!.localizedDescription)")
             } else {
-                var json = JSONValue(data!)
-                
+                //var json = JSONValue(data!)
                 //var results:NSMutableArray = json["results"] as NSMutableArray
                 //println(results)
             }
