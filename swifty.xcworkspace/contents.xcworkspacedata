@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Portal/Portal.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Portal/Pods/Pods.xcodeproj">
+   </FileRef>
 </Workspace>
