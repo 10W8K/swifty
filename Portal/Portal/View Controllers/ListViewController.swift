@@ -44,36 +44,23 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.view.addSubview(self.tableView!)
         
-        
-        
-        //println(self.delegate)
-        
+
         // Do any additional setup after loading the view.
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
             //println("DISPATCH_QUEUE_PRIORITY_DEFAULT")
             let path = NSBundle.mainBundle().pathForResource("posts", ofType: "plist")
             self.posts = NSMutableArray(contentsOfFile:path)
-            //println(self.posts![0])
+
             
             dispatch_async(dispatch_get_main_queue(), {
-                
                 println("当前共有记录:[ \(self.posts!.count) ]条")
-                
-                //self.tableView!.delegate = self
-                //self.tableView!.dataSource = self
-                
                 self.tableView!.reloadData()
                 println(self.tableView!)
-                
-                
             });
             
         });
         
 
-
-        
-        //var jsonParser = SBJson4Parser()
         
         
         let r = HttpRequest(url: "https://itunes.apple.com/lookup?id=909253")
