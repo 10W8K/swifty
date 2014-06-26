@@ -11,7 +11,8 @@ import UIKit
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var posts: NSMutableArray? ,
-    tableView: UITableView?
+    tableView: UITableView? ,
+    refreshHeaderView: EGORefreshTableHeaderView?
     
     var cellIndentifier = "cellIndentifier"
     
@@ -43,6 +44,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         self.view.addSubview(self.tableView!)
+        
+        
+        
+        self.refreshHeaderView = EGORefreshTableHeaderView(frame:CGRectMake(0,0 - self.tableView!.bounds.size.height,self.tableView!.bounds.size.width, self.tableView!.bounds.size.height))
+        //self.refreshHeaderView!.delegate = self
+        self.tableView!.addSubview(self.refreshHeaderView!)
         
 
         // Do any additional setup after loading the view.
@@ -122,4 +129,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         println(cell.contentView.frame)
         return 44.0
     }
+    
+//    func egoRefreshTableHeaderDidTriggerRefresh(view:EGORefreshTableHeaderView){
+//        
+//    }
+//    func egoRefreshTableHeaderDataSourceIsLoading(view:EGORefreshTableHeaderView) -> Int {
+//        return true
+//    }
 }

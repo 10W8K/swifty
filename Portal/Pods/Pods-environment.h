@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_ArrayUtils 3
 #define COCOAPODS_VERSION_PATCH_ArrayUtils 0
 
+// EGOTableViewPullRefresh
+#define COCOAPODS_POD_AVAILABLE_EGOTableViewPullRefresh
+#define COCOAPODS_VERSION_MAJOR_EGOTableViewPullRefresh 0
+#define COCOAPODS_VERSION_MINOR_EGOTableViewPullRefresh 1
+#define COCOAPODS_VERSION_PATCH_EGOTableViewPullRefresh 0
+
 // SBJson
 #define COCOAPODS_POD_AVAILABLE_SBJson
 #define COCOAPODS_VERSION_MAJOR_SBJson 4

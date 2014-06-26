@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-EGOTableViewPullRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SBJson.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,42 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>37706799817341C3A253AA75</key>
+		<key>10D07003D02C4D4CAA825490</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56A3327B54B44919B57C5B9B</key>
+		<key>11FB60BCF18D4CE0BAA0E0E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5CA97A1681AF4CEDB1451510</key>
+		<key>7E140333AA24458D924B5794</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C13BFA638A4187BD12A5C6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7F50BB1B8B444AE49CFFC107</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C8C2BD96421C4F5C96036760</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D7250DD9DE044EEC8B3D092C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ED437CABF50C476C8E65082E</key>
+		<key>D44A4F8208994536A662CE8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -10,3 +10,4 @@
 #import "UIColor+Hex.h"
 #import "SBJson4.h"
 #import "ArrayUtils.h"
+#import "EGORefreshTableHeaderView.h"
