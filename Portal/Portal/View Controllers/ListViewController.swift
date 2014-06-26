@@ -71,6 +71,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         });
         
 
+
         
         //var jsonParser = SBJson4Parser()
         
@@ -80,9 +81,13 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             if (error) {
                 println("Error: \(error!.localizedDescription)")
             } else {
-                //var json = JSONValue(data!)
-                //var results:NSMutableArray = json["results"] as NSMutableArray
+                var jsonData : AnyObject! = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil)
+                var results : NSArray! = jsonData.objectForKey("results") as NSArray
                 //println(results)
+                for item:AnyObject in results as NSArray{
+                    //println(item)
+                    println(item.objectForKey("amgArtistId"))
+                }
             }
         })
         
@@ -92,26 +97,6 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-    // #pragma mark - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
-    //    func loadJSONFile(){
-    //        var filePath=NSBundle.mainBundle().pathForResource("file", ofType: "json")
-    //        var err: NSError
-    //        var jsonData : NSData=NSData.dataWithContentsOfMappedFile(filePath) as NSData
-    //        var json: NSDictionary = NSJSONSerialization.JSONObjectWithData(jsonData as NSData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
-    //        var results: NSArray = json["item"] as NSArray
-    //        self.posts = results
-    //    }
     
     
     func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
@@ -128,28 +113,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         var cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: self.cellIndentifier + "_" + String(indexPath.row))
         cell.accessoryType = UITableViewCellAccessoryType.None
         cell.selectionStyle = UITableViewCellSelectionStyle.Default
-        //cell.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
-        //cell.contentView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         var listCellView = MUIListCellView(frame:cell.contentView.frame)
         listCellView.title.text = self.posts![indexPath.row]!["title"] as NSString
-        //println("....")
-        //println(listCellView.frame)
         cell.contentView.insertSubview(listCellView, atIndex:0)
-        
-        //cell.contentView.sizeToFit()
-        //cell.sizeToFit()
-        
-        
+
         return cell
     }
     
     // UITableViewDelegate Methods
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         self.tableView!.deselectRowAtIndexPath(indexPath, animated: true)
-        
-        //var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
-        //cell.highlighted = false
-        //println(cell.frame)
     }
 
     func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat{
