@@ -117,7 +117,6 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
         
         for itemkey in self.itemArray[indexPath.row].keys {
             if(itemkey == "MUInputBox") {
-                //                var textfieldTableView = textfieldTableViewController(nibName:nil,bundle:nil)
                 var textfieldTableView = textfieldTableViewController()
                 textfieldTableView.title = itemkey
                 self.navigationController.pushViewController(textfieldTableView, animated:true)
@@ -127,11 +126,7 @@ class IndexViewController: BaseMUIViewController, UITableViewDelegate, UITableVi
                 detailViewController.title = itemkey
                 self.navigationController.pushViewController(detailViewController, animated:true)
             }
-            
         }
-        
-        //detailViewController.title = self.items?.objectAtIndex(indexPath.row)  as String
-        //        self.navigationController.pushViewController(detailViewController, animated:true)
     }
     
     func showProfile(sender: UIBarButtonItem){

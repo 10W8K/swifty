@@ -14,11 +14,6 @@ class textfieldTableViewController: UIViewController, UITableViewDelegate, UITab
 
     var cellIndentifier = "cellIndentifier"
 
-//    init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-//        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-//        // Custom initialization
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,9 +23,9 @@ class textfieldTableViewController: UIViewController, UITableViewDelegate, UITab
         println(self.view.frame.size.height)
         self.view.backgroundColor = UIColor.whiteColor()
 
-        self.tableView = UITableView(frame:CGRectMake(self.view.frame.origin.x,self.view.frame.origin.y,self.view.frame.size.width,self.view.frame.size.height), style:UITableViewStyle.Plain)
+        self.tableView = UITableView(frame:self.view.frame,style:UITableViewStyle.Grouped)
         
-        self.tableView!.registerClass(MUITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
+        self.tableView!.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIndentifier)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
         // Do any additional setup after loading the view.
@@ -51,26 +46,54 @@ class textfieldTableViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int
     {
-        return 5
+        return 1
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as MUITableViewCell!
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellIndentifier, forIndexPath: indexPath) as UITableViewCell!
+        
+        if(!cell) {
+            cell = nil
+        }
+        
+//        cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: cellIndentifier)
         
         cell.accessoryType = UITableViewCellAccessoryType.None
         
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        
 //        cell.textLabel.text = "xxx"
 //        cell.detailTextLabel.text = "yyy"
+//        cell.imageView
+//        cell.contentView
+//        cell.backgroundView
+//        cell.selectBackgroundView
+//        cell.multipleSelectionBackgroundView
+//        cell.reuseIdentifier
+//        cell.selectionStyle
         
-        var textField = UITextField(frame:CGRectMake(10.0, 10.0, 300.0, 36.0))
-        textField.backgroundColor = UIColor.lightGrayColor()
-        textField.placeholder = "input text"
+//        var textField = UITextField(frame:CGRectMake(80.0, 0, 100.0, 56.0))
+        var textField = MUITextField(frame:CGRectMake(80.0, 0, 100.0, 56.0))
+
+        textField.backgroundColor = UIColor(hex:0xffffff)
+        textField.placeholder = "请输入手机号码"
+        textField.font = UIFont(name:"Helvetica",size:14)
+        
+        var label = UILabel(frame:CGRectMake(10.0, 0, 70.0, 56.0))
+        label.text = "手机号码："
+        label.backgroundColor = UIColor(hex:0xffffff)
+        label.font = UIFont(name:"Helvetica",size:14)
+        
         cell.contentView.addSubview(textField)
+        cell.contentView.addSubview(label)
         
+//        var textFieldWithLabel = MUITextFieldWithLabelView(frame:CGRectMake(10.0, 10.0, 300.0, 40.0))
+//        textFieldWithLabel.label.text = "手机XXX"
+//
+//        cell.contentView.addSubview(textFieldWithLabel)
+
         return cell
-        
-        
         
     }
     
@@ -78,6 +101,13 @@ class textfieldTableViewController: UIViewController, UITableViewDelegate, UITab
         return 56.0
     }
 
+    func tableView(tableView: UITableView!, willSelectRowAtIndexPath indexPath: NSIndexPath!) -> NSIndexPath! {
+        return nil
+    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        println("你好，啊")
+    }
     /*
     // #pragma mark - Navigation
 
@@ -87,5 +117,4 @@ class textfieldTableViewController: UIViewController, UITableViewDelegate, UITab
         // Pass the selected object to the new view controller.
     }
     */
-
 }
